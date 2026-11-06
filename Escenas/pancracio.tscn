@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://2hr8g2qyvu7r"]
+
+[ext_resource type="Script" uid="uid://dvs750uryln0n" path="res://Scripts/pancracio.gd" id="1_ys81g"]
+[ext_resource type="Resource" uid="uid://comflotwjpxi5" path="res://Recursos/harina.tres" id="2_2fc1q"]
+[ext_resource type="Script" uid="uid://b8x6lfam55k1q" path="res://Scripts/maquina_estados.gd" id="2_jfiep"]
+[ext_resource type="Script" uid="uid://oo7d6mk5r81m" path="res://Clases/Estado.gd" id="3_22p2d"]
+[ext_resource type="Texture2D" uid="uid://dgpayotngaske" path="res://icon.svg" id="4_22p2d"]
+[ext_resource type="Script" uid="uid://bumb2kbgr6l1q" path="res://Scripts/movimiento.gd" id="4_jfiep"]
+[ext_resource type="Script" uid="uid://dmruqp2tlywa5" path="res://Scripts/salto.gd" id="5_w6ydn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jfiep"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_22p2d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22p2d"]
+size = Vector2(127, 120)
+
+[node name="Pancracio" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_ys81g")
+sprite = NodePath("AnimatedSprite2D")
+recurso_estado = ExtResource("2_2fc1q")
+metadata/_custom_type_script = "uid://d303p2o0jjphn"
+
+[node name="Maquina_estados" type="Node" parent="." node_paths=PackedStringArray("personaje", "estados")]
+script = ExtResource("2_jfiep")
+personaje = NodePath("..")
+estados = [NodePath("Idle"), NodePath("Movimiento"), NodePath("Salto"), NodePath("Transformacion")]
+metadata/_custom_type_script = "uid://du8b3lq8wqt81"
+
+[node name="Idle" type="Node" parent="Maquina_estados" node_paths=PackedStringArray("personaje", "maquina")]
+script = ExtResource("3_22p2d")
+personaje = NodePath("../..")
+maquina = NodePath("..")
+metadata/_custom_type_script = "uid://oo7d6mk5r81m"
+
+[node name="Movimiento" type="Node" parent="Maquina_estados" node_paths=PackedStringArray("personaje", "maquina")]
+script = ExtResource("4_jfiep")
+personaje = NodePath("../..")
+maquina = NodePath("..")
+nombre = "Movimiento"
+metadata/_custom_type_script = "uid://oo7d6mk5r81m"
+
+[node name="Salto" type="Node" parent="Maquina_estados" node_paths=PackedStringArray("personaje", "maquina")]
+script = ExtResource("5_w6ydn")
+personaje = NodePath("../..")
+maquina = NodePath("..")
+metadata/_custom_type_script = "uid://oo7d6mk5r81m"
+
+[node name="Transformacion" type="Node" parent="Maquina_estados" node_paths=PackedStringArray("personaje", "maquina")]
+script = ExtResource("3_22p2d")
+personaje = NodePath("../..")
+maquina = NodePath("..")
+metadata/_custom_type_script = "uid://oo7d6mk5r81m"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jfiep")
+animation = &"idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Cuerpo" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_22p2d")

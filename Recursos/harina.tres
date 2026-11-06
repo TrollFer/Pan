@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Recurso_estado" load_steps=2 format=3 uid="uid://comflotwjpxi5"]
+
+[ext_resource type="Script" uid="uid://ds3vtq125d3qe" path="res://Recursos/recurso_estado.gd" id="1_3llr1"]
+
+[resource]
+script = ExtResource("1_3llr1")
+nombre = "harina"
+velocidad = 20
+masa = 0.8
+matriz_propiedades = Array[bool]([true, false])
+metadata/_custom_type_script = "uid://ds3vtq125d3qe"

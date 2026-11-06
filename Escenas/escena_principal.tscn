@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://pe2fl7b5iu5y"]
+
+[ext_resource type="PackedScene" uid="uid://2hr8g2qyvu7r" path="res://Escenas/pancracio.tscn" id="1_wmjee"]
+[ext_resource type="Texture2D" uid="uid://dgpayotngaske" path="res://icon.svg" id="2_ripk3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ripk3"]
+size = Vector2(257, 20)
+
+[node name="Escena_principal" type="Node2D"]
+
+[node name="Pancracio" parent="." instance=ExtResource("1_wmjee")]
+position = Vector2(-1, -126)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(77, 98)
+scale = Vector2(0.265625, 0.28125)
+texture = ExtResource("2_ripk3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.5, 98)
+shape = SubResource("RectangleShape2D_ripk3")

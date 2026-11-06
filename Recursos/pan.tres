@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Recurso_estado" load_steps=2 format=3 uid="uid://biemmnujimtvj"]
+
+[ext_resource type="Script" uid="uid://ds3vtq125d3qe" path="res://Recursos/recurso_estado.gd" id="1_80h08"]
+
+[resource]
+script = ExtResource("1_80h08")
+matriz_propiedades = Array[bool]([false, false])
+metadata/_custom_type_script = "uid://ds3vtq125d3qe"
