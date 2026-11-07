@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://blkjmhqhxham3"]
+
+[ext_resource type="Script" uid="uid://bkyoefbodwcwn" path="res://Clases/Ventana.gd" id="1_hgdav"]
+
+[node name="Ventana" type="Area2D"]
+script = ExtResource("1_hgdav")
+metadata/_custom_type_script = "uid://bkyoefbodwcwn"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
