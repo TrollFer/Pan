@@ -2,9 +2,15 @@ extends Pancracio
 
 @export var sprite : AnimatedSprite2D
 var P
-func _ready() -> void:
-	P = recurso_estado.masa*Global.gravedad
+
+func _enter_tree() -> void:
+	Global.pancracio = self
 
 func _physics_process(delta: float) -> void:
+	
+	P = recurso_estado.masa*Global.gravedad
 	velocity.y += P
 	move_and_slide()
+
+func activar_transformacion(nuevo_estado: String):
+	get_node('Maquina_estados/Transformacion').transformacion(nuevo_estado)

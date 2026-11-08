@@ -1,23 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://pe2fl7b5iu5y"]
+[gd_scene load_steps=7 format=3 uid="uid://pe2fl7b5iu5y"]
 
 [ext_resource type="PackedScene" uid="uid://2hr8g2qyvu7r" path="res://Escenas/pancracio.tscn" id="1_wmjee"]
 [ext_resource type="Texture2D" uid="uid://dgpayotngaske" path="res://icon.svg" id="2_ripk3"]
+[ext_resource type="PackedScene" uid="uid://blkjmhqhxham3" path="res://Escenas/ventana.tscn" id="3_pboj7"]
+[ext_resource type="PackedScene" uid="uid://butel0ogsiawu" path="res://Escenas/caldera.tscn" id="4_s6hsl"]
+[ext_resource type="PackedScene" uid="uid://kdkgakdojnsd" path="res://Escenas/horno.tscn" id="5_7xruv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ripk3"]
-size = Vector2(257, 20)
+size = Vector2(713, 20)
 
 [node name="Escena_principal" type="Node2D"]
 
 [node name="Pancracio" parent="." instance=ExtResource("1_wmjee")]
-position = Vector2(-1, -126)
+position = Vector2(-216, -19)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Suelo" type="StaticBody2D" parent="."]
+scale = Vector2(4.2442064, 1.9319901)
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(77, 98)
-scale = Vector2(0.265625, 0.28125)
+[node name="Icon" type="Sprite2D" parent="Suelo"]
+position = Vector2(21, 102)
+scale = Vector2(5.6093745, 0.21875003)
 texture = ExtResource("2_ripk3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1.5, 98)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo"]
+position = Vector2(19.5, 98)
 shape = SubResource("RectangleShape2D_ripk3")
+
+[node name="Ventana" parent="." instance=ExtResource("3_pboj7")]
+position = Vector2(23, -52)
+
+[node name="Caldera" parent="." instance=ExtResource("4_s6hsl")]
+position = Vector2(-450, -14)
+
+[node name="Horno" parent="." instance=ExtResource("5_7xruv")]
+position = Vector2(222, 81)

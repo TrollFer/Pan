@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://2hr8g2qyvu7r"]
+[gd_scene load_steps=11 format=3 uid="uid://2hr8g2qyvu7r"]
 
 [ext_resource type="Script" uid="uid://dvs750uryln0n" path="res://Scripts/pancracio.gd" id="1_ys81g"]
 [ext_resource type="Resource" uid="uid://comflotwjpxi5" path="res://Recursos/harina.tres" id="2_2fc1q"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dgpayotngaske" path="res://icon.svg" id="4_22p2d"]
 [ext_resource type="Script" uid="uid://bumb2kbgr6l1q" path="res://Scripts/movimiento.gd" id="4_jfiep"]
 [ext_resource type="Script" uid="uid://dmruqp2tlywa5" path="res://Scripts/salto.gd" id="5_w6ydn"]
+[ext_resource type="Script" uid="uid://mn3m57toodrf" path="res://Scripts/transformacion.gd" id="7_1mje7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jfiep"]
 animations = [{
@@ -54,9 +55,10 @@ maquina = NodePath("..")
 metadata/_custom_type_script = "uid://oo7d6mk5r81m"
 
 [node name="Transformacion" type="Node" parent="Maquina_estados" node_paths=PackedStringArray("personaje", "maquina")]
-script = ExtResource("3_22p2d")
+script = ExtResource("7_1mje7")
 personaje = NodePath("../..")
 maquina = NodePath("..")
+nombre = "Transformacion"
 metadata/_custom_type_script = "uid://oo7d6mk5r81m"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

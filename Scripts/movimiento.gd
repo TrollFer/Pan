@@ -9,7 +9,7 @@ func _physics_process(delta: float) -> void:
 
 func procesamiento():
 	if Input.is_action_pressed("md"):
-		personaje.velocity.x += personaje.velocidad
+		personaje.velocity.x += personaje.recurso_estado.velocidad
 	elif Input.is_action_pressed("mi"):
-		personaje.velocity.x -= personaje.velocidad
+		personaje.velocity.x -= personaje.recurso_estado.velocidad
 	personaje.velocity.x /= rozamiento

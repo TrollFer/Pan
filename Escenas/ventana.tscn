@@ -1,9 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://blkjmhqhxham3"]
+[gd_scene load_steps=5 format=3 uid="uid://blkjmhqhxham3"]
 
-[ext_resource type="Script" uid="uid://bkyoefbodwcwn" path="res://Clases/Ventana.gd" id="1_hgdav"]
+[ext_resource type="Script" uid="uid://lif056naj7x7" path="res://Scripts/ventana.gd" id="1_4gcwx"]
+[ext_resource type="Texture2D" uid="uid://dgpayotngaske" path="res://icon.svg" id="2_4gcwx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cpefq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4gcwx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpefq"]
+size = Vector2(117, 124)
 
 [node name="Ventana" type="Area2D"]
-script = ExtResource("1_hgdav")
+script = ExtResource("1_4gcwx")
 metadata/_custom_type_script = "uid://bkyoefbodwcwn"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 1, 0, 1)
+sprite_frames = SubResource("SpriteFrames_cpefq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_cpefq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

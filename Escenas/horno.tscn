@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://kdkgakdojnsd"]
+
+[ext_resource type="Script" uid="uid://fam1q2qctlvi" path="res://Scripts/horno.gd" id="1_4dxy7"]
+[ext_resource type="Texture2D" uid="uid://dgpayotngaske" path="res://icon.svg" id="2_ad6h3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_snrhb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ad6h3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f81qf"]
+size = Vector2(118, 120)
+
+[node name="Horno" type="Area2D"]
+script = ExtResource("1_4dxy7")
+metadata/_custom_type_script = "uid://doki8jyt5fd7j"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+sprite_frames = SubResource("SpriteFrames_snrhb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_f81qf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
