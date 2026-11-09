@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://pe2fl7b5iu5y"]
+[gd_scene load_steps=8 format=3 uid="uid://pe2fl7b5iu5y"]
 
+[ext_resource type="PackedScene" uid="uid://x2vm7q58f2k4" path="res://Escenas/fuelle.tscn" id="1_kbm13"]
 [ext_resource type="PackedScene" uid="uid://2hr8g2qyvu7r" path="res://Escenas/pancracio.tscn" id="1_wmjee"]
 [ext_resource type="Texture2D" uid="uid://dgpayotngaske" path="res://icon.svg" id="2_ripk3"]
 [ext_resource type="PackedScene" uid="uid://blkjmhqhxham3" path="res://Escenas/ventana.tscn" id="3_pboj7"]
@@ -11,8 +12,13 @@ size = Vector2(713, 20)
 
 [node name="Escena_principal" type="Node2D"]
 
+[node name="Fuelle" parent="." instance=ExtResource("1_kbm13")]
+position = Vector2(-823, 90)
+rotation = 0.5235988
+potencia = 800
+
 [node name="Pancracio" parent="." instance=ExtResource("1_wmjee")]
-position = Vector2(-216, -19)
+position = Vector2(-212, -60)
 
 [node name="Suelo" type="StaticBody2D" parent="."]
 scale = Vector2(4.2442064, 1.9319901)
@@ -30,7 +36,7 @@ shape = SubResource("RectangleShape2D_ripk3")
 position = Vector2(23, -52)
 
 [node name="Caldera" parent="." instance=ExtResource("4_s6hsl")]
-position = Vector2(-450, -14)
+position = Vector2(-425, -77)
 
 [node name="Horno" parent="." instance=ExtResource("5_7xruv")]
-position = Vector2(222, 81)
+position = Vector2(260, -46)

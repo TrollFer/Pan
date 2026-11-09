@@ -1,6 +1,8 @@
 extends Estado
 
-var rozamiento = 1.09
+var rozamiento = 0.99
+var dir
+
 
 func _physics_process(delta: float) -> void:
 	activacion = Input.is_action_pressed('md') or Input.is_action_pressed('mi')
@@ -8,8 +10,5 @@ func _physics_process(delta: float) -> void:
 		maquina.cambiar(nombre)
 
 func procesamiento():
-	if Input.is_action_pressed("md"):
-		personaje.velocity.x += personaje.recurso_estado.velocidad
-	elif Input.is_action_pressed("mi"):
-		personaje.velocity.x -= personaje.recurso_estado.velocidad
-	personaje.velocity.x /= rozamiento
+	dir = Input.get_axis('mi', 'md')
+	personaje.velocidad_externa.x = personaje.recurso_estado.velocidad*dir

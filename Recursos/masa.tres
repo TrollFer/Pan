@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_g05jq")
 nombre = "masa"
-velocidad = 20
+velocidad = 250
 masa = 1.0
 matriz_propiedades = Array[bool]([false, true])
 metadata/_custom_type_script = "uid://ds3vtq125d3qe"

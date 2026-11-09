@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://x2vm7q58f2k4"]
+
+[ext_resource type="Script" uid="uid://dcxl2apxjraou" path="res://fuelle.gd" id="1_33xtu"]
+[ext_resource type="Texture2D" uid="uid://dgpayotngaske" path="res://icon.svg" id="2_xlsa0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33xtu"]
+size = Vector2(113, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_43mg1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xlsa0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fuelle" type="CharacterBody2D"]
+script = ExtResource("1_33xtu")
+potencia = 500
+metadata/_custom_type_script = "uid://da8g75iasogaw"
+
+[node name="Zona_empuje" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zona_empuje"]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_33xtu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(2.7075353, 2.7075353, 2.7075353, 1)
+sprite_frames = SubResource("SpriteFrames_43mg1")
+
+[connection signal="body_entered" from="Zona_empuje" to="." method="_on_zona_empuje_body_entered"]
