@@ -19,7 +19,7 @@ animations = [{
 
 [node name="Fuelle" type="CharacterBody2D"]
 script = ExtResource("1_33xtu")
-potencia = 500
+potencia = 600
 metadata/_custom_type_script = "uid://da8g75iasogaw"
 
 [node name="Zona_empuje" type="Area2D" parent="."]

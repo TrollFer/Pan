@@ -6,4 +6,5 @@ class_name Fuelle
 
 func ventilar(personaje: Node2D):
 	if personaje.recurso_estado.nombre == 'harina':
-			personaje.velocidad_externa = -potencia*transform.y
+			personaje.velocidad_externa -= potencia*transform.y
+			print(-potencia*transform.y)

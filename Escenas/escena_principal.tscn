@@ -14,8 +14,8 @@ size = Vector2(713, 20)
 
 [node name="Fuelle" parent="." instance=ExtResource("1_kbm13")]
 position = Vector2(-823, 90)
-rotation = 0.5235988
-potencia = 800
+rotation = -0.7853982
+potencia = 1000
 
 [node name="Pancracio" parent="." instance=ExtResource("1_wmjee")]
 position = Vector2(-212, -60)

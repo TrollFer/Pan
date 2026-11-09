@@ -11,4 +11,4 @@ func _physics_process(delta: float) -> void:
 
 func procesamiento():
 	dir = Input.get_axis('mi', 'md')
-	personaje.velocidad_externa.x = personaje.recurso_estado.velocidad*dir
+	personaje.velocidad_interna.x = personaje.recurso_estado.velocidad*dir
