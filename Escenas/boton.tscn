@@ -1,0 +1,77 @@
+[gd_scene load_steps=13 format=3 uid="uid://bh2jxt7i76h08"]
+
+[ext_resource type="Script" uid="uid://3agtjt4jvcd5" path="res://Scripts/boton.gd" id="1_jv8a0"]
+[ext_resource type="Texture2D" uid="uid://blv407138tf7i" path="res://Assets/Boton/boton_apretado-frame-1.png" id="2_ig0xm"]
+[ext_resource type="Texture2D" uid="uid://cqf64xn68s0st" path="res://Assets/Boton/boton_apretado-frame-2.png" id="3_k0cv8"]
+[ext_resource type="Texture2D" uid="uid://b6pfkblg6gg7g" path="res://Assets/Boton/boton_apretado-frame-3.png" id="4_0dwkp"]
+[ext_resource type="Texture2D" uid="uid://g5bt7t5y8jbp" path="res://Assets/Boton/boton_apretado-frame-4.png" id="5_wrean"]
+[ext_resource type="Texture2D" uid="uid://1hda8dip0ftm" path="res://Assets/Boton/boton_normal_1.png" id="6_baut0"]
+[ext_resource type="Texture2D" uid="uid://dk1l2oi10114" path="res://Assets/Boton/boton_normal_2.png" id="7_nukit"]
+[ext_resource type="Texture2D" uid="uid://c5rw37n32ew4s" path="res://Assets/Boton/boton_normal_3.png" id="8_oi2lp"]
+[ext_resource type="Texture2D" uid="uid://ckpkg1101hv5r" path="res://Assets/Boton/boton_normal_4.png" id="9_28j3n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ibnk"]
+size = Vector2(96, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ul18k"]
+size = Vector2(98, 29)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cnvcx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ig0xm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k0cv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0dwkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wrean")
+}],
+"loop": true,
+"name": &"aplastado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_baut0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nukit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_oi2lp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_28j3n")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}]
+
+[node name="Boton" type="CharacterBody2D"]
+script = ExtResource("1_jv8a0")
+metadata/_custom_type_script = "uid://bjivf5bv2qcek"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 19.5)
+shape = SubResource("RectangleShape2D_2ibnk")
+
+[node name="Deteccion" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deteccion"]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_ul18k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, 24)
+scale = Vector2(0.1376479, 0.1376479)
+sprite_frames = SubResource("SpriteFrames_cnvcx")
+animation = &"aplastado"
+frame_progress = 0.2320894
+
+[connection signal="body_entered" from="Deteccion" to="." method="_on_deteccion_body_entered"]

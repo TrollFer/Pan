@@ -1,6 +1,5 @@
-extends Area2D
-class_name Caldera
-
+extends CharacterBody2D
+class_name Gota
 
 func echar_agua(personaje: Node2D):
 	if personaje.recurso_estado.nombre == 'harina':

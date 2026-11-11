@@ -1,13 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://blkjmhqhxham3"]
+[gd_scene load_steps=8 format=3 uid="uid://blkjmhqhxham3"]
 
 [ext_resource type="Script" uid="uid://lif056naj7x7" path="res://Scripts/ventana.gd" id="1_4gcwx"]
-[ext_resource type="Texture2D" uid="uid://dgpayotngaske" path="res://icon.svg" id="2_4gcwx"]
+[ext_resource type="Texture2D" uid="uid://dwamtm68gm6ml" path="res://Assets/Ventana/ventana-frame-1.png" id="2_cu3pr"]
+[ext_resource type="Texture2D" uid="uid://cqvl5xj4x8ys1" path="res://Assets/Ventana/ventana-frame-2.png" id="3_oc167"]
+[ext_resource type="Texture2D" uid="uid://cdgif8v5jbe1k" path="res://Assets/Ventana/ventana-frame-3.png" id="4_1c1x7"]
+[ext_resource type="Texture2D" uid="uid://dabubjyxaoo6b" path="res://Assets/Ventana/ventana-frame-4.png" id="5_50jvs"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_cpefq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ifsi1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_4gcwx")
+"texture": ExtResource("2_cu3pr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oc167")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1c1x7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_50jvs")
 }],
 "loop": true,
 "name": &"default",
@@ -18,12 +30,13 @@ animations = [{
 size = Vector2(117, 124)
 
 [node name="Ventana" type="Area2D"]
+scale = Vector2(1.2994494, 1.2994494)
 script = ExtResource("1_4gcwx")
 metadata/_custom_type_script = "uid://bkyoefbodwcwn"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-modulate = Color(0, 1, 0, 1)
-sprite_frames = SubResource("SpriteFrames_cpefq")
+scale = Vector2(0.21167736, 0.21167736)
+sprite_frames = SubResource("SpriteFrames_ifsi1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)

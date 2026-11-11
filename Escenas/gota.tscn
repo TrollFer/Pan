@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://butel0ogsiawu"]
+
+[ext_resource type="Script" uid="uid://bvdgus1hesx76" path="res://Scripts/gota.gd" id="1_muodd"]
+[ext_resource type="Texture2D" uid="uid://gdssbcx4no6s" path="res://Assets/Gota_animacion/agua+transparente-frame-1 (1).png" id="2_02coc"]
+[ext_resource type="Texture2D" uid="uid://cka4k2utx0hpt" path="res://Assets/Gota_animacion/agua+transparente-frame-2 (1).png" id="3_042og"]
+[ext_resource type="Texture2D" uid="uid://bqxnlni85noj4" path="res://Assets/Gota_animacion/agua+transparente-frame-3 (1).png" id="4_2xqb6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4aimk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_02coc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_042og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2xqb6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dijx3"]
+size = Vector2(11, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_02coc"]
+radius = 80.09994
+
+[node name="Gota" type="CharacterBody2D"]
+input_pickable = true
+script = ExtResource("1_muodd")
+metadata/_custom_type_script = "uid://8dsh76ca7jj"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.06733688, 0.06302938)
+sprite_frames = SubResource("SpriteFrames_4aimk")
+frame_progress = 0.21284282
+
+[node name="Interaccion" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaccion"]
+position = Vector2(-17.5, 3)
+shape = SubResource("RectangleShape2D_dijx3")
+
+[node name="Atraccion" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Atraccion"]
+position = Vector2(-8, 12)
+shape = SubResource("CircleShape2D_02coc")
+
+[connection signal="body_entered" from="Interaccion" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Atraccion" to="." method="_on_atraccion_body_entered"]
