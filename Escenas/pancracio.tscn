@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://2hr8g2qyvu7r"]
+[gd_scene load_steps=12 format=3 uid="uid://2hr8g2qyvu7r"]
 
 [ext_resource type="Script" uid="uid://dvs750uryln0n" path="res://Scripts/pancracio.gd" id="1_ys81g"]
 [ext_resource type="Resource" uid="uid://comflotwjpxi5" path="res://Recursos/harina.tres" id="2_2fc1q"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bumb2kbgr6l1q" path="res://Scripts/movimiento.gd" id="4_jfiep"]
 [ext_resource type="Script" uid="uid://dmruqp2tlywa5" path="res://Scripts/salto.gd" id="5_w6ydn"]
 [ext_resource type="Script" uid="uid://mn3m57toodrf" path="res://Scripts/transformacion.gd" id="7_1mje7"]
+[ext_resource type="Script" uid="uid://d0h1hylmmttgm" path="res://Scripts/lanzar_masa.gd" id="8_t45nq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jfiep"]
 animations = [{
@@ -39,6 +40,7 @@ metadata/_custom_type_script = "uid://du8b3lq8wqt81"
 script = ExtResource("3_22p2d")
 personaje = NodePath("../..")
 maquina = NodePath("..")
+nombre = "Idle"
 metadata/_custom_type_script = "uid://oo7d6mk5r81m"
 
 [node name="Movimiento" type="Node" parent="Maquina_estados" node_paths=PackedStringArray("personaje", "maquina")]
@@ -52,13 +54,21 @@ metadata/_custom_type_script = "uid://oo7d6mk5r81m"
 script = ExtResource("5_w6ydn")
 personaje = NodePath("../..")
 maquina = NodePath("..")
+nombre = "Salto"
 metadata/_custom_type_script = "uid://oo7d6mk5r81m"
 
 [node name="Transformacion" type="Node" parent="Maquina_estados" node_paths=PackedStringArray("personaje", "maquina")]
 script = ExtResource("7_1mje7")
 personaje = NodePath("../..")
 maquina = NodePath("..")
-nombre = "Transformacion"
+nombre = "Trasnformacion"
+metadata/_custom_type_script = "uid://oo7d6mk5r81m"
+
+[node name="Lanzar_masa" type="Node" parent="Maquina_estados" node_paths=PackedStringArray("personaje", "maquina")]
+script = ExtResource("8_t45nq")
+personaje = NodePath("../..")
+maquina = NodePath("..")
+nombre = "Lanzar_masa"
 metadata/_custom_type_script = "uid://oo7d6mk5r81m"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

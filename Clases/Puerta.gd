@@ -8,5 +8,5 @@ var animacion : AnimatedSprite2D
 func activar():
 	if abierta == false:
 		abierta = true
-		colisionador.set_deferred("disabled", true)
+		colisionador.set_deferred("disabled", true) #Me obliga a usarlo para que no se buguee
 		animacion.play('abierta')

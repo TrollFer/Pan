@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://cnchctjkjlftx"]
+
+[ext_resource type="Script" uid="uid://d350s2q1t0d7l" path="res://Scripts/masita.gd" id="1_1cuwe"]
+[ext_resource type="Resource" uid="uid://db6krdc4olcb3" path="res://Recursos/masa.tres" id="2_5pk7v"]
+[ext_resource type="Script" uid="uid://rd1bt01cqxal" path="res://Escenas/maquina_estados_masita.gd" id="3_5pk7v"]
+[ext_resource type="Script" uid="uid://oo7d6mk5r81m" path="res://Clases/Estado.gd" id="3_xwmad"]
+[ext_resource type="Script" uid="uid://cccch1apji862" path="res://Scripts/movimiento_masita.gd" id="4_nc8k0"]
+[ext_resource type="Script" uid="uid://b70nuib32qcqa" path="res://Scripts/salto_masita.gd" id="6_j4xvm"]
+[ext_resource type="Script" uid="uid://vim5u81hmhq7" path="res://Scripts/adherirse_masita.gd" id="7_7mu5d"]
+[ext_resource type="Texture2D" uid="uid://dgpayotngaske" path="res://icon.svg" id="8_ywonu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_53j6r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ywonu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trvg6"]
+size = Vector2(34, 36)
+
+[node name="Masita" type="CharacterBody2D"]
+script = ExtResource("1_1cuwe")
+recurso_estado = ExtResource("2_5pk7v")
+metadata/_custom_type_script = "uid://jwtm3s8dn14m"
+
+[node name="Maquina_estados_masita" type="Node" parent="." node_paths=PackedStringArray("personaje", "estados")]
+script = ExtResource("3_5pk7v")
+personaje = NodePath("..")
+estados = [NodePath("Idle_masita"), NodePath("Movimiento_masita"), NodePath("Salto_masita"), NodePath("Adherirse_masita")]
+metadata/_custom_type_script = "uid://du8b3lq8wqt81"
+
+[node name="Idle_masita" type="Node" parent="Maquina_estados_masita" node_paths=PackedStringArray("personaje", "maquina")]
+script = ExtResource("3_xwmad")
+personaje = NodePath("../..")
+maquina = NodePath("..")
+nombre = "Idle_masita"
+metadata/_custom_type_script = "uid://oo7d6mk5r81m"
+
+[node name="Movimiento_masita" type="Node" parent="Maquina_estados_masita" node_paths=PackedStringArray("personaje", "maquina")]
+script = ExtResource("4_nc8k0")
+personaje = NodePath("../..")
+maquina = NodePath("..")
+nombre = "Movimiento_masita"
+metadata/_custom_type_script = "uid://oo7d6mk5r81m"
+
+[node name="Salto_masita" type="Node" parent="Maquina_estados_masita" node_paths=PackedStringArray("personaje", "maquina")]
+script = ExtResource("6_j4xvm")
+personaje = NodePath("../..")
+maquina = NodePath("..")
+nombre = "Salto_masita"
+metadata/_custom_type_script = "uid://oo7d6mk5r81m"
+
+[node name="Adherirse_masita" type="Node" parent="Maquina_estados_masita" node_paths=PackedStringArray("personaje", "maquina")]
+script = ExtResource("7_7mu5d")
+personaje = NodePath("../..")
+maquina = NodePath("..")
+nombre = "Adherirse_masita"
+metadata/_custom_type_script = "uid://oo7d6mk5r81m"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.27103698, 0.28018352)
+sprite_frames = SubResource("SpriteFrames_53j6r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_trvg6")

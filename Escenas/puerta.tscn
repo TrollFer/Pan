@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://xyo3weicc6ya"]
 
-[ext_resource type="Script" uid="uid://c2ln437vyd3u3" path="res://Escenas/puerta.gd" id="1_4u488"]
+[ext_resource type="Script" uid="uid://c2ln437vyd3u3" path="res://Scripts/puerta.gd" id="1_4u488"]
 [ext_resource type="Texture2D" uid="uid://53uoipaa13v4" path="res://Assets/Puerta/puerta_abierta-frame-1.png" id="2_qmxwf"]
 [ext_resource type="Texture2D" uid="uid://cvhr18p8wjqj6" path="res://Assets/Puerta/puerta_abierta-frame-2.png" id="3_ao0ja"]
 [ext_resource type="Texture2D" uid="uid://d1tnvnij7ih6p" path="res://Assets/Puerta/puerta_abierta-frame-3.png" id="4_f6qug"]
