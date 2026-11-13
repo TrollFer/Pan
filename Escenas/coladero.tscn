@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://briivn5ge3dtw"]
+
+[ext_resource type="Texture2D" uid="uid://bcqtf4uncua2e" path="res://Assets/Coladero/coladero2-frame-1.png" id="1_kjlxj"]
+[ext_resource type="Script" uid="uid://dn6dkhgc477b" path="res://Scripts/coladero.gd" id="1_uphiu"]
+[ext_resource type="Texture2D" uid="uid://kspugbx34r64" path="res://Assets/Coladero/coladero2-frame-2.png" id="2_uphiu"]
+[ext_resource type="Texture2D" uid="uid://bcyfaix6oa3ff" path="res://Assets/Coladero/coladero2-frame-3.png" id="3_i3wkd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etyiw"]
+size = Vector2(203, 161)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3cdsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kjlxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uphiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i3wkd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Coladero" type="StaticBody2D"]
+collision_mask = 0
+script = ExtResource("1_uphiu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_etyiw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(15, -65)
+scale = Vector2(0.123838045, 0.123838045)
+sprite_frames = SubResource("SpriteFrames_3cdsb")

@@ -8,4 +8,5 @@ nombre = "harina"
 velocidad = 300
 masa = 0.8
 matriz_propiedades = Array[bool]([true, false])
+colision = Array[int]([2])
 metadata/_custom_type_script = "uid://ds3vtq125d3qe"

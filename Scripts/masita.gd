@@ -1,5 +1,7 @@
 extends Masita
 
+func _ready() -> void:
+	floor_snap_length = 5
 
 func _enter_tree() -> void:
 	Global.masita = self

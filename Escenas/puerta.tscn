@@ -51,6 +51,9 @@ animations = [{
 }]
 
 [node name="Puerta" type="StaticBody2D" node_paths=PackedStringArray("colisionador")]
+scale = Vector2(2.458793, 2.458793)
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_4u488")
 colisionador = NodePath("CollisionShape2D")
 metadata/_custom_type_script = "uid://buyv7fjcmpq37"

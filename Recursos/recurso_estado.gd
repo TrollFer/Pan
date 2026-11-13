@@ -6,6 +6,8 @@ class_name Recurso_estado
 @export var velocidad : int
 @export var masa : float
 @export var matriz_propiedades : Array[bool]
+@export var colision : Array[int] #Con que colisionan
+
 #orden de propiedades: primero vuelo, segundo lanzar masa
 
 #La matriz_propiedades es una matriz que indica si cierto estado tiene o no ciertas propiedades,

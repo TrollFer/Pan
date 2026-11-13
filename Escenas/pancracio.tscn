@@ -25,6 +25,8 @@ animations = [{
 size = Vector2(127, 120)
 
 [node name="Pancracio" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
+collision_layer = 3
+collision_mask = 2
 script = ExtResource("1_ys81g")
 sprite = NodePath("AnimatedSprite2D")
 recurso_estado = ExtResource("2_2fc1q")
@@ -61,7 +63,7 @@ metadata/_custom_type_script = "uid://oo7d6mk5r81m"
 script = ExtResource("7_1mje7")
 personaje = NodePath("../..")
 maquina = NodePath("..")
-nombre = "Trasnformacion"
+nombre = "Transformacion"
 metadata/_custom_type_script = "uid://oo7d6mk5r81m"
 
 [node name="Lanzar_masa" type="Node" parent="Maquina_estados" node_paths=PackedStringArray("personaje", "maquina")]

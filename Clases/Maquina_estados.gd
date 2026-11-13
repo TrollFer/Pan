@@ -6,9 +6,10 @@ class_name Maquina_estados
 var estado_activo
 
 func cambiar(estado: String):
-	estado_activo.salir()
-	estado_activo = get_node(estado)
-	estado_activo.entrar()
+	if estado_activo.saltable:
+		estado_activo.salir()
+		estado_activo = get_node(estado)
+		estado_activo.entrar()
 
 func _physics_process(delta: float) -> void:
 	estado_activo.procesamiento()

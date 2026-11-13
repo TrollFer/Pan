@@ -4,6 +4,9 @@ extends Pancracio
 
 func _enter_tree() -> void:
 	Global.pancracio = self
+	
+func _ready() -> void:
+	floor_snap_length = 5
 
 func _physics_process(delta: float) -> void:
 	calcular_velocidad()

@@ -13,5 +13,9 @@ func entrar():
 		personaje.recurso_estado = load("res://Recursos/masa.tres")
 	if estado == 'pan':
 		personaje.recurso_estado = load("res://Recursos/pan.tres")
-	#Tambien puedo añadir aqui las transformaciones
+	
+	
+	for capa in personaje.recurso_estado.colision:
+		personaje.set_collision_mask_value(capa, true)
+		#Para las capas de colision
 	
