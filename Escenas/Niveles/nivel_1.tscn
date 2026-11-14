@@ -1,0 +1,460 @@
+[gd_scene load_steps=13 format=3 uid="uid://dmw7hbvu65t2g"]
+
+[ext_resource type="Script" uid="uid://bhmpnwigak4qq" path="res://Clases/Nivel.gd" id="1_gj223"]
+[ext_resource type="PackedScene" uid="uid://cakn36ironlys" path="res://Escenas/suelo.tscn" id="2_3c2k2"]
+[ext_resource type="FontFile" uid="uid://dyiw4yclae8gl" path="res://Assets/Matcha Style.otf" id="2_lswwr"]
+[ext_resource type="PackedScene" uid="uid://2hr8g2qyvu7r" path="res://Escenas/pancracio.tscn" id="3_lswwr"]
+[ext_resource type="PackedScene" uid="uid://briivn5ge3dtw" path="res://Escenas/coladero.tscn" id="4_llk6u"]
+[ext_resource type="PackedScene" uid="uid://x2vm7q58f2k4" path="res://Escenas/fuelle.tscn" id="6_llk6u"]
+[ext_resource type="PackedScene" uid="uid://butel0ogsiawu" path="res://Escenas/gota.tscn" id="7_l8lnw"]
+[ext_resource type="PackedScene" uid="uid://xyo3weicc6ya" path="res://Escenas/puerta.tscn" id="8_rbs6h"]
+[ext_resource type="PackedScene" uid="uid://bh2jxt7i76h08" path="res://Escenas/boton.tscn" id="9_310hg"]
+[ext_resource type="PackedScene" uid="uid://blkjmhqhxham3" path="res://Escenas/ventana.tscn" id="10_yeyq8"]
+[ext_resource type="PackedScene" uid="uid://kdkgakdojnsd" path="res://Escenas/horno.tscn" id="12_gmctc"]
+[ext_resource type="PackedScene" uid="uid://de5wac5sb5il7" path="res://Escenas/saco.tscn" id="12_nqjrd"]
+
+[node name="Nivel1" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_gj223")
+metadata/_custom_type_script = "uid://bhmpnwigak4qq"
+
+[node name="TextEdit" type="Label" parent="."]
+offset_left = -2012.0
+offset_top = -543.0
+offset_right = -1692.0
+offset_bottom = -508.0
+theme_override_colors/font_color = Color(0.37204057, 0.71703726, 0.33557278, 1)
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 30
+text = "Atraviesa coladeros "
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit7" type="Label" parent="."]
+offset_left = -2088.0
+offset_top = -797.0
+offset_right = -1768.0
+offset_bottom = -570.0
+theme_override_colors/font_color = Color(0.40838683, 0.7135438, 0.26888904, 1)
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 96
+text = "HARINa
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit15" type="Label" parent="."]
+offset_left = -6451.0
+offset_top = -2304.0
+offset_right = -5869.0
+offset_bottom = -2077.0
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 64
+text = "Este es pancracio"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit16" type="Label" parent="."]
+offset_left = -5746.0
+offset_top = -2307.0
+offset_right = -5164.0
+offset_bottom = -2080.0
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 64
+text = "Su objetivo es 
+cocinarse en pan"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit17" type="Label" parent="."]
+offset_left = -5049.0
+offset_top = -2357.0
+offset_right = -3965.0
+offset_bottom = -2126.0
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 64
+text = "Pero todavía es harina,
+antes debe convertirse
+en masa y entrar en el horno "
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit18" type="Label" parent="."]
+offset_left = -3913.0
+offset_top = -2360.0
+offset_right = -2205.0
+offset_bottom = -2129.0
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 64
+text = "cada estado tiene distinitas ventajas y desventajas
+que usarás para llegar al horno"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit8" type="Label" parent="."]
+offset_left = 771.0
+offset_top = -411.0
+offset_right = 1017.0
+offset_bottom = -184.0
+theme_override_colors/font_color = Color(0.9490196, 0.5137255, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 96
+text = "masa
+"
+
+[node name="TextEdit2" type="Label" parent="."]
+offset_left = -129.0
+offset_top = -204.0
+offset_right = 149.0
+offset_bottom = -125.0
+theme_override_colors/font_color = Color(0.38640213, 0.7126929, 0.36657107, 1)
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 32
+text = "Usa ventiladores
+ para impulsarte"
+
+[node name="TextEdit9" type="Label" parent="."]
+offset_left = -1525.0
+offset_top = -259.0
+offset_right = -1074.0
+offset_bottom = -180.0
+theme_override_colors/font_color = Color(0.38640213, 0.7126929, 0.36657107, 1)
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 32
+text = "Cuidado con las ventanas, 
+¡Te volarán por los aires!"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit3" type="Label" parent="."]
+offset_left = 719.0
+offset_top = -112.0
+offset_right = 1200.0
+offset_bottom = -33.0
+theme_override_colors/font_color = Color(0.9490196, 0.5137255, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 32
+text = "Siendo harina usa agua para 
+transformarte en masa"
+
+[node name="TextEdit4" type="Label" parent="."]
+offset_left = 1632.0
+offset_top = -210.0
+offset_right = 2266.0
+offset_bottom = -90.0
+theme_override_colors/font_color = Color(0.9490196, 0.5137255, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 32
+text = "Puedes lanzar un trocito de ti mismo 
+hacia delante con click derecho"
+
+[node name="TextEdit5" type="Label" parent="."]
+offset_left = 3277.0002
+offset_top = 41.0
+offset_right = 3554.0002
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("2_lswwr")
+text = "Usa botones para abrir puertas"
+
+[node name="TextEdit10" type="Label" parent="."]
+offset_left = 5905.0
+offset_top = -177.0
+offset_right = 6413.0
+offset_bottom = -98.0
+theme_override_colors/font_color = Color(0.9490196, 0.5137255, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 32
+text = "Entra en el horno como masa
+para superar el nivel"
+
+[node name="TextEdit14" type="Label" parent="."]
+offset_left = 4942.0
+offset_top = -102.0
+offset_right = 5626.0
+offset_bottom = -23.0
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 32
+text = "Si en algun momento te quedas atascado,
+pulsa esc y reinicia el nivel"
+
+[node name="TextEdit6" type="Label" parent="."]
+offset_left = 3599.0002
+offset_top = 26.0
+offset_right = 3876.0002
+offset_bottom = 109.0
+theme_override_colors/font_color = Color(0.9490196, 0.5137255, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("2_lswwr")
+text = "Vuelve a hacer click derecho 
+para volver a tu estado 
+original"
+
+[node name="TextEdit13" type="Label" parent="."]
+offset_left = 4185.0
+offset_top = -216.0
+offset_right = 4513.0
+offset_bottom = -137.0
+theme_override_colors/font_color = Color(0.9490196, 0.5137255, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 32
+text = "Usa el saco para 
+volver a ser harina"
+
+[node name="TextEdit11" type="Label" parent="."]
+offset_left = 2532.0002
+offset_top = -309.0
+offset_right = 3049.0002
+offset_bottom = -271.0
+theme_override_colors/font_color = Color(0.9490196, 0.5137255, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 32
+text = "Lánzalo por espacios pequeños"
+
+[node name="TextEdit12" type="Label" parent="."]
+offset_left = 2752.0002
+offset_top = 28.0
+offset_right = 3113.0002
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.9490196, 0.5137255, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("2_lswwr")
+text = "Tiene las mismas propiedades que la harina"
+
+[node name="Suelo" parent="." instance=ExtResource("2_3c2k2")]
+
+[node name="Suelo2" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(507, 350)
+
+[node name="Suelo3" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(1181, 193)
+
+[node name="Suelo4" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(1181, 349.99997)
+
+[node name="Suelo13" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(2529, 194.00003)
+
+[node name="Suelo21" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(2641.0002, -658)
+rotation = 1.5707964
+
+[node name="Suelo14" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(2529, 351)
+
+[node name="Suelo15" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(3203.0002, 194)
+
+[node name="Suelo16" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(3203.0002, 350.99997)
+
+[node name="Suelo17" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(3877.0002, 194.00003)
+
+[node name="Suelo18" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(3877.0002, 351)
+
+[node name="Suelo19" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(4551, 194)
+
+[node name="Suelo26" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(4791, -365.99997)
+rotation = 1.5707964
+
+[node name="Suelo20" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(4551, 350.99997)
+
+[node name="Suelo22" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(5223, 195.00003)
+
+[node name="Suelo23" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(5223, 352)
+
+[node name="Suelo24" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(5897, 195)
+
+[node name="Suelo25" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(5897, 351.99997)
+
+[node name="Suelo5" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-838.9999, 193.00003)
+
+[node name="Suelo6" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-838.9999, 350)
+
+[node name="Suelo7" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-164.99988, 193)
+
+[node name="Suelo8" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-164.99988, 349.99997)
+
+[node name="Suelo27" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(505.99985, 515)
+
+[node name="Suelo28" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(505.99988, 672)
+
+[node name="Suelo29" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(1179.9999, 515)
+
+[node name="Suelo30" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(1179.9999, 671.99994)
+
+[node name="Suelo65" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(1856, 193)
+
+[node name="Suelo66" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(1856, 349.99997)
+
+[node name="Suelo67" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(1855, 515)
+
+[node name="Suelo68" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(1855, 671.99994)
+
+[node name="Suelo31" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(2528, 516)
+
+[node name="Suelo32" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(2528, 673)
+
+[node name="Suelo33" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(3202.0002, 516)
+
+[node name="Suelo34" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(3320.0002, -392.99982)
+
+[node name="Suelo35" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(3876.0002, 516)
+
+[node name="Suelo36" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(3876.0002, 673)
+
+[node name="Suelo37" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(4550, 516)
+
+[node name="Suelo38" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(4550, 672.99994)
+
+[node name="Suelo39" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(5222, 517)
+
+[node name="Suelo40" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(5222, 674)
+
+[node name="Suelo41" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(5896, 517)
+
+[node name="Suelo42" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(5896, 673.99994)
+
+[node name="Suelo43" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-840, 515)
+
+[node name="Suelo44" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-840, 672)
+
+[node name="Suelo45" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-166, 515)
+
+[node name="Suelo46" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-166, 671.99994)
+
+[node name="Suelo47" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-1513.9999, 193.00003)
+
+[node name="Suelo48" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-1513.9999, 350)
+
+[node name="Suelo49" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-2859.9998, 193.00003)
+
+[node name="Suelo59" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-5663, -1816.9999)
+
+[node name="Suelo60" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-6338, -1817)
+
+[node name="Suelo61" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-4988, -1817)
+
+[node name="Suelo62" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-3639, -1816.9999)
+
+[node name="Suelo63" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-4314, -1817)
+
+[node name="Suelo64" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-2964, -1817)
+
+[node name="Suelo50" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-2859.9998, 350)
+
+[node name="Suelo51" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-2185.9998, 193)
+
+[node name="Suelo52" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-2185.9998, 349.99997)
+
+[node name="Suelo53" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-1515, 515)
+
+[node name="Suelo54" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-1515, 672)
+
+[node name="Suelo55" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-2861, 515)
+
+[node name="Suelo56" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-2861, 672)
+
+[node name="Suelo57" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-2187, 515)
+
+[node name="Suelo58" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-2187, 671.99994)
+
+[node name="Suelo9" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-2179.9998, -385.9999)
+
+[node name="Suelo10" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-2427, -798)
+rotation = 1.5707964
+
+[node name="Suelo11" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-1544, -787)
+rotation = 1.5707964
+
+[node name="Suelo12" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(273.99997, -11.0000305)
+rotation = 1.5707964
+scale = Vector2(0.2082112, 0.6062224)
+
+[node name="Pancracio" parent="." instance=ExtResource("3_lswwr")]
+position = Vector2(-5907, -1959)
+
+[node name="Coladero" parent="." instance=ExtResource("4_llk6u")]
+position = Vector2(-1742, -377)
+
+[node name="Fuelle" parent="." instance=ExtResource("6_llk6u")]
+position = Vector2(-30.999878, -22.999954)
+rotation = 0.5061455
+potencia = 900
+
+[node name="Gota" parent="." instance=ExtResource("7_l8lnw")]
+position = Vector2(1356, -110)
+
+[node name="Puerta" parent="." instance=ExtResource("8_rbs6h")]
+position = Vector2(2558.0002, -142)
+
+[node name="Boton" parent="." node_paths=PackedStringArray("objetivo") instance=ExtResource("9_310hg")]
+position = Vector2(3428.0002, 92)
+objetivo = NodePath("../Puerta")
+
+[node name="Ventana" parent="." instance=ExtResource("10_yeyq8")]
+position = Vector2(-1324, -73)
+
+[node name="Horno" parent="." instance=ExtResource("12_gmctc")]
+position = Vector2(6067, 13.000008)
+
+[node name="Saco" parent="." instance=ExtResource("12_nqjrd")]
+position = Vector2(4320, -68)
+
+[node name="Coladero2" parent="." instance=ExtResource("4_llk6u")]
+position = Vector2(4787, 49)
+
+[node name="Gota2" parent="." instance=ExtResource("7_l8lnw")]
+position = Vector2(5780, -98)
+
+[node name="Coladero3" parent="." instance=ExtResource("4_llk6u")]
+position = Vector2(2550.0002, 45)

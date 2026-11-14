@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3 uid="uid://chawprpbvsej6"]
+
+[ext_resource type="Script" uid="uid://bhmpnwigak4qq" path="res://Clases/Nivel.gd" id="1_0n8q0"]
+[ext_resource type="PackedScene" uid="uid://cakn36ironlys" path="res://Escenas/suelo.tscn" id="2_ftdqf"]
+[ext_resource type="PackedScene" uid="uid://briivn5ge3dtw" path="res://Escenas/coladero.tscn" id="3_mbn1r"]
+[ext_resource type="PackedScene" uid="uid://2hr8g2qyvu7r" path="res://Escenas/pancracio.tscn" id="4_5us05"]
+[ext_resource type="PackedScene" uid="uid://x2vm7q58f2k4" path="res://Escenas/fuelle.tscn" id="5_udchn"]
+[ext_resource type="PackedScene" uid="uid://butel0ogsiawu" path="res://Escenas/gota.tscn" id="6_jtfu3"]
+[ext_resource type="PackedScene" uid="uid://kdkgakdojnsd" path="res://Escenas/horno.tscn" id="7_mbn1r"]
+[ext_resource type="PackedScene" uid="uid://xyo3weicc6ya" path="res://Escenas/puerta.tscn" id="8_udchn"]
+[ext_resource type="PackedScene" uid="uid://bh2jxt7i76h08" path="res://Escenas/boton.tscn" id="9_jtfu3"]
+
+[node name="Nivel2" type="Node2D"]
+script = ExtResource("1_0n8q0")
+numero = 1
+metadata/_custom_type_script = "uid://bhmpnwigak4qq"
+
+[node name="Suelo2" parent="." instance=ExtResource("2_ftdqf")]
+position = Vector2(1013, 433.00003)
+
+[node name="Suelo4" parent="." instance=ExtResource("2_ftdqf")]
+position = Vector2(1012, 597)
+
+[node name="Suelo6" parent="." instance=ExtResource("2_ftdqf")]
+position = Vector2(1013, 762)
+
+[node name="Suelo8" parent="." instance=ExtResource("2_ftdqf")]
+position = Vector2(1012, 926)
+
+[node name="Suelo9" parent="." instance=ExtResource("2_ftdqf")]
+position = Vector2(2383, 438)
+
+[node name="Suelo17" parent="." instance=ExtResource("2_ftdqf")]
+position = Vector2(2770.0002, -265.00003)
+rotation = 1.5707964
+
+[node name="Suelo11" parent="." instance=ExtResource("2_ftdqf")]
+position = Vector2(2382, 602)
+
+[node name="Suelo13" parent="." instance=ExtResource("2_ftdqf")]
+position = Vector2(2383, 767)
+
+[node name="Suelo15" parent="." instance=ExtResource("2_ftdqf")]
+position = Vector2(2382, 931)
+
+[node name="Suelo10" parent="." instance=ExtResource("2_ftdqf")]
+position = Vector2(3065, 438)
+
+[node name="Suelo12" parent="." instance=ExtResource("2_ftdqf")]
+position = Vector2(3064, 602)
+
+[node name="Suelo14" parent="." instance=ExtResource("2_ftdqf")]
+position = Vector2(3065, 767)
+
+[node name="Suelo16" parent="." instance=ExtResource("2_ftdqf")]
+position = Vector2(3064, 931)
+
+[node name="Coladero" parent="." instance=ExtResource("3_mbn1r")]
+position = Vector2(1684, 369)
+
+[node name="Pancracio" parent="." instance=ExtResource("4_5us05")]
+position = Vector2(1275, 309)
+
+[node name="Fuelle" parent="." instance=ExtResource("5_udchn")]
+position = Vector2(806, 263)
+potencia = 1000
+
+[node name="Gota" parent="." instance=ExtResource("6_jtfu3")]
+position = Vector2(822, -147)
+
+[node name="Horno" parent="." instance=ExtResource("7_mbn1r")]
+position = Vector2(3242, 251)
+
+[node name="Puerta" parent="." instance=ExtResource("8_udchn")]
+position = Vector2(2758, 248)
+
+[node name="Boton" parent="." node_paths=PackedStringArray("objetivo") instance=ExtResource("9_jtfu3")]
+position = Vector2(2970, 329)
+objetivo = NodePath("../Puerta")

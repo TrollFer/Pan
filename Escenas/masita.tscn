@@ -1,31 +1,45 @@
-[gd_scene load_steps=11 format=3 uid="uid://cnchctjkjlftx"]
+[gd_scene load_steps=12 format=3 uid="uid://cnchctjkjlftx"]
 
 [ext_resource type="Script" uid="uid://d350s2q1t0d7l" path="res://Scripts/masita.gd" id="1_1cuwe"]
-[ext_resource type="Resource" uid="uid://db6krdc4olcb3" path="res://Recursos/masa.tres" id="2_5pk7v"]
+[ext_resource type="Resource" uid="uid://comflotwjpxi5" path="res://Recursos/harina.tres" id="2_5pk7v"]
 [ext_resource type="Script" uid="uid://rd1bt01cqxal" path="res://Scripts/maquina_estados_masita.gd" id="3_5pk7v"]
 [ext_resource type="Script" uid="uid://oo7d6mk5r81m" path="res://Clases/Estado.gd" id="3_xwmad"]
 [ext_resource type="Script" uid="uid://cccch1apji862" path="res://Scripts/movimiento_masita.gd" id="4_nc8k0"]
 [ext_resource type="Script" uid="uid://b70nuib32qcqa" path="res://Scripts/salto_masita.gd" id="6_j4xvm"]
 [ext_resource type="Script" uid="uid://ut6dkaqdb67w" path="res://Scripts/deshacerse.gd" id="7_5pk7v"]
-[ext_resource type="Texture2D" uid="uid://dgpayotngaske" path="res://icon.svg" id="8_ywonu"]
+[ext_resource type="Texture2D" uid="uid://cwg41232bywyf" path="res://Assets/Masa/masa.png" id="8_j4xvm"]
+[ext_resource type="Texture2D" uid="uid://cldy3axj6dep4" path="res://Assets/Masa/masa2.png" id="9_7mu5d"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_53j6r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_ywonu")
+"texture": ExtResource("8_j4xvm")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_j4xvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7mu5d")
+}],
+"loop": true,
+"name": &"moverse",
 "speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5pk7v"]
 radius = 17.0
 
-[node name="Masita" type="CharacterBody2D"]
+[node name="Masita" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
 collision_layer = 3
+collision_mask = 2
 script = ExtResource("1_1cuwe")
+sprite = NodePath("AnimatedSprite2D")
 recurso_estado = ExtResource("2_5pk7v")
 metadata/_custom_type_script = "uid://jwtm3s8dn14m"
 
@@ -64,8 +78,10 @@ nombre = "Deshacerse"
 metadata/_custom_type_script = "uid://oo7d6mk5r81m"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.27103698, 0.28018352)
+position = Vector2(2.9999998, -1.9999999)
+scale = Vector2(0.01982598, 0.020495038)
 sprite_frames = SubResource("SpriteFrames_53j6r")
+animation = &"moverse"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_5pk7v")

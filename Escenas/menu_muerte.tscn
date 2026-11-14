@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=3 uid="uid://qo5o6nc263tc"]
+
+[ext_resource type="Script" uid="uid://882w4gxku8fp" path="res://Scripts/menu_muerte.gd" id="1_l3o2l"]
+[ext_resource type="FontFile" uid="uid://dyiw4yclae8gl" path="res://Assets/Matcha Style.otf" id="2_aiu27"]
+
+[node name="Menu_muerte" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_l3o2l")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -188.0
+offset_right = 190.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.86264265, 0.31470266, 0.35159966, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -146.0
+offset_right = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 100
+
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_aiu27")
+theme_override_font_sizes/font_size = 48
+text = "¡Has Muerto!"
+horizontal_alignment = 1
+
+[node name="MarginContainer5" type="MarginContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 40
+
+[node name="Mensaje_muerte" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_aiu27")
+theme_override_font_sizes/font_size = 10
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 100
+
+[node name="MarginContainer3" type="MarginContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 40
+
+[node name="Reiniciar" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_aiu27")
+text = "Volver a intentar"
+
+[node name="MarginContainer4" type="MarginContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 40
+
+[node name="Salir" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_aiu27")
+text = "Salir"
+
+[node name="MarginContainer6" type="MarginContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 40
+
+[connection signal="pressed" from="Control/VBoxContainer/Reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Salir" to="." method="_on_salir_pressed"]

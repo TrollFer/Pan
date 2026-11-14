@@ -1,28 +1,48 @@
-[gd_scene load_steps=12 format=3 uid="uid://2hr8g2qyvu7r"]
+[gd_scene load_steps=15 format=3 uid="uid://2hr8g2qyvu7r"]
 
 [ext_resource type="Script" uid="uid://dvs750uryln0n" path="res://Scripts/pancracio.gd" id="1_ys81g"]
 [ext_resource type="Resource" uid="uid://comflotwjpxi5" path="res://Recursos/harina.tres" id="2_2fc1q"]
 [ext_resource type="Script" uid="uid://b8x6lfam55k1q" path="res://Scripts/maquina_estados.gd" id="2_jfiep"]
-[ext_resource type="Script" uid="uid://oo7d6mk5r81m" path="res://Clases/Estado.gd" id="3_22p2d"]
-[ext_resource type="Texture2D" uid="uid://dgpayotngaske" path="res://icon.svg" id="4_22p2d"]
+[ext_resource type="Script" uid="uid://cqqi2wmw63hne" path="res://Scripts/idle.gd" id="4_1mje7"]
 [ext_resource type="Script" uid="uid://bumb2kbgr6l1q" path="res://Scripts/movimiento.gd" id="4_jfiep"]
 [ext_resource type="Script" uid="uid://dmruqp2tlywa5" path="res://Scripts/salto.gd" id="5_w6ydn"]
 [ext_resource type="Script" uid="uid://mn3m57toodrf" path="res://Scripts/transformacion.gd" id="7_1mje7"]
 [ext_resource type="Script" uid="uid://d0h1hylmmttgm" path="res://Scripts/lanzar_masa.gd" id="8_t45nq"]
+[ext_resource type="Texture2D" uid="uid://cu0f1gpqtsvsi" path="res://Assets/Harina/Harina-frame-1.png" id="9_h2wl8"]
+[ext_resource type="Texture2D" uid="uid://cmv6hahnqukiu" path="res://Assets/Harina/Harina-frame-2.png" id="10_pvxke"]
+[ext_resource type="Texture2D" uid="uid://d3rm7k1n3oklm" path="res://Assets/Harina/Harina-frame-3.png" id="11_xp1qu"]
+[ext_resource type="Texture2D" uid="uid://d3hfv3qhgfks2" path="res://Assets/Harina/Harina2.png" id="12_pyt3c"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_jfiep"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_j012j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_22p2d")
+"texture": ExtResource("9_h2wl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pvxke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xp1qu")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_pyt3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xp1qu")
+}],
+"loop": true,
+"name": &"moverse",
+"speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_22p2d"]
-size = Vector2(127, 120)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2wl8"]
+size = Vector2(108, 71)
 
 [node name="Pancracio" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
 collision_layer = 3
@@ -39,7 +59,7 @@ estados = [NodePath("Idle"), NodePath("Movimiento"), NodePath("Salto"), NodePath
 metadata/_custom_type_script = "uid://du8b3lq8wqt81"
 
 [node name="Idle" type="Node" parent="Maquina_estados" node_paths=PackedStringArray("personaje", "maquina")]
-script = ExtResource("3_22p2d")
+script = ExtResource("4_1mje7")
 personaje = NodePath("../..")
 maquina = NodePath("..")
 nombre = "Idle"
@@ -74,11 +94,13 @@ nombre = "Lanzar_masa"
 metadata/_custom_type_script = "uid://oo7d6mk5r81m"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_jfiep")
-animation = &"idle"
+scale = Vector2(0.054878063, 0.054878063)
+sprite_frames = SubResource("SpriteFrames_j012j")
+animation = &"moverse"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.8, 0.8)
 
 [node name="Cuerpo" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -1)
-shape = SubResource("RectangleShape2D_22p2d")
+position = Vector2(4, -14.5)
+shape = SubResource("RectangleShape2D_h2wl8")

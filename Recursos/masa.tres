@@ -1,12 +1,36 @@
-[gd_resource type="Resource" script_class="Recurso_estado" load_steps=2 format=3 uid="uid://db6krdc4olcb3"]
+[gd_resource type="Resource" script_class="Recurso_estado" load_steps=5 format=3 uid="uid://db6krdc4olcb3"]
 
 [ext_resource type="Script" uid="uid://ds3vtq125d3qe" path="res://Recursos/Recurso_estado.gd" id="1_g05jq"]
+[ext_resource type="Texture2D" uid="uid://cwg41232bywyf" path="res://Assets/Masa/masa.png" id="1_ngr7r"]
+[ext_resource type="Texture2D" uid="uid://cldy3axj6dep4" path="res://Assets/Masa/masa2.png" id="2_ta8d1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ngr7r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ngr7r")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ta8d1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_ngr7r")
+}],
+"loop": true,
+"name": &"moverse",
+"speed": 5.0
+}]
 
 [resource]
 script = ExtResource("1_g05jq")
+animaciones = SubResource("SpriteFrames_ngr7r")
 nombre = "masa"
-velocidad = 250
+velocidad = 400
 masa = 1.0
-matriz_propiedades = Array[bool]([false, true])
 colision = Array[int]([1, 2])
 metadata/_custom_type_script = "uid://ds3vtq125d3qe"

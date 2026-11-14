@@ -1,21 +1,38 @@
-[gd_scene load_steps=7 format=3 uid="uid://kdkgakdojnsd"]
+[gd_scene load_steps=9 format=3 uid="uid://kdkgakdojnsd"]
 
 [ext_resource type="Script" uid="uid://fam1q2qctlvi" path="res://Scripts/horno.gd" id="1_4dxy7"]
-[ext_resource type="Texture2D" uid="uid://bmsudmmgusssp" path="res://Assets/Horno/Horno-frame-1.png" id="2_snrhb"]
-[ext_resource type="Texture2D" uid="uid://buf7i0dpy4cgi" path="res://Assets/Horno/Horno-frame-2.png" id="3_f81qf"]
-[ext_resource type="Texture2D" uid="uid://ebdh2rct7cho" path="res://Assets/Horno/Horno-frame-3.png" id="4_nlhhn"]
+[ext_resource type="Texture2D" uid="uid://drv65a31ia28s" path="res://Assets/Horno/Horno_spritesheet_4f.png" id="2_4dxy7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ad6h3"]
+atlas = ExtResource("2_4dxy7")
+region = Rect2(0, 0, 1440, 1350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snrhb"]
+atlas = ExtResource("2_4dxy7")
+region = Rect2(1440, 0, 1440, 1350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f81qf"]
+atlas = ExtResource("2_4dxy7")
+region = Rect2(2880, 0, 1440, 1350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlhhn"]
+atlas = ExtResource("2_4dxy7")
+region = Rect2(4320, 0, 1440, 1350)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_snrhb"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_snrhb")
+"texture": SubResource("AtlasTexture_ad6h3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_f81qf")
+"texture": SubResource("AtlasTexture_snrhb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_nlhhn")
+"texture": SubResource("AtlasTexture_f81qf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlhhn")
 }],
 "loop": true,
 "name": &"default",
@@ -33,9 +50,10 @@ script = ExtResource("1_4dxy7")
 metadata/_custom_type_script = "uid://doki8jyt5fd7j"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(16, 28.000002)
+position = Vector2(0.5672064, 3.4032478)
 scale = Vector2(0.08817783, 0.09636535)
 sprite_frames = SubResource("SpriteFrames_snrhb")
+frame_progress = 0.1515532
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1)

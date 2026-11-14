@@ -1,12 +1,44 @@
-[gd_resource type="Resource" script_class="Recurso_estado" load_steps=2 format=3 uid="uid://comflotwjpxi5"]
+[gd_resource type="Resource" script_class="Recurso_estado" load_steps=7 format=3 uid="uid://comflotwjpxi5"]
 
 [ext_resource type="Script" uid="uid://ds3vtq125d3qe" path="res://Recursos/Recurso_estado.gd" id="1_3llr1"]
+[ext_resource type="Texture2D" uid="uid://cu0f1gpqtsvsi" path="res://Assets/Harina/Harina-frame-1.png" id="1_tcpr6"]
+[ext_resource type="Texture2D" uid="uid://cmv6hahnqukiu" path="res://Assets/Harina/Harina-frame-2.png" id="2_mt73j"]
+[ext_resource type="Texture2D" uid="uid://d3rm7k1n3oklm" path="res://Assets/Harina/Harina-frame-3.png" id="3_8aqqk"]
+[ext_resource type="Texture2D" uid="uid://d3hfv3qhgfks2" path="res://Assets/Harina/Harina2.png" id="4_rms5d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j012j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tcpr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mt73j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8aqqk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8aqqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rms5d")
+}],
+"loop": true,
+"name": &"moverse",
+"speed": 5.0
+}]
 
 [resource]
 script = ExtResource("1_3llr1")
+animaciones = SubResource("SpriteFrames_j012j")
 nombre = "harina"
-velocidad = 300
+velocidad = 500
 masa = 0.8
-matriz_propiedades = Array[bool]([true, false])
 colision = Array[int]([2])
 metadata/_custom_type_script = "uid://ds3vtq125d3qe"

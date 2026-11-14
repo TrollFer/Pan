@@ -1,6 +1,6 @@
 extends Estado
 
-var potencia = 700
+var potencia = 1200
 
 func _physics_process(delta: float) -> void:
 	activacion = Input.is_action_just_pressed("saltar") and personaje.is_on_floor()
@@ -8,5 +8,5 @@ func _physics_process(delta: float) -> void:
 		maquina.cambiar(nombre)
 
 func entrar():
-	personaje.velocidad_interna.y -= potencia
+	personaje.velocidad_interna.y = -potencia
 	maquina.cambiar('Idle')

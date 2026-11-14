@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://de5wac5sb5il7"]
+
+[ext_resource type="Script" uid="uid://rrj7c2mp7qk1" path="res://Scripts/saco.gd" id="1_0vakf"]
+[ext_resource type="Texture2D" uid="uid://babskwrdu5v4p" path="res://Assets/Saco/saco_harina2-frame-3.png" id="2_veqca"]
+[ext_resource type="Texture2D" uid="uid://b3wtrj450qapk" path="res://Assets/Saco/saco_harina2-frame-2.png" id="3_m7myb"]
+[ext_resource type="Texture2D" uid="uid://cg0w2kwl43n6u" path="res://Assets/Saco/saco_harina2-frame-1.png" id="4_utm0o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_udmpr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_veqca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m7myb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_utm0o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dijx3"]
+size = Vector2(11, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_02coc"]
+radius = 80.09994
+
+[node name="Saco" type="CharacterBody2D"]
+input_pickable = true
+script = ExtResource("1_0vakf")
+metadata/_custom_type_script = "uid://8dsh76ca7jj"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-8, 6.999997)
+scale = Vector2(0.048874788, 0.035937347)
+sprite_frames = SubResource("SpriteFrames_udmpr")
+
+[node name="Interaccion" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaccion"]
+position = Vector2(-17.5, 3)
+shape = SubResource("RectangleShape2D_dijx3")
+
+[node name="Atraccion" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Atraccion"]
+position = Vector2(-8, 12)
+shape = SubResource("CircleShape2D_02coc")
+
+[connection signal="body_entered" from="Interaccion" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Atraccion" to="." method="_on_atraccion_body_entered"]

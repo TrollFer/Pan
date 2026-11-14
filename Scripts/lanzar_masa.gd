@@ -4,7 +4,7 @@ var objetivo : Vector2
 var dir : Vector2
 var masita_escena = preload("res://Escenas/masita.tscn") #Trozo de masa que hereda de pancracio
 var masita : Masita
-var potencia = 500
+var potencia = 800
 
 @onready var camara = $"../../Camera2D"
 

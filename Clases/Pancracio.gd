@@ -10,8 +10,13 @@ var P
 func calcular_velocidad():
 	
 	if not is_on_floor():
-		P = recurso_estado.masa*Global.gravedad
-		velocidad_externa.y += P
+		if velocity.y < 0:
+			P = recurso_estado.masa*Global.gravedad
+			velocidad_externa.y += P*2
+		elif velocity.y >= 0:
+			velocidad_interna.y *= 0.9
+			P = recurso_estado.masa*Global.gravedad
+			velocidad_externa.y += P*2
 	else:
 		velocidad_externa.y = 0
 	
@@ -24,6 +29,9 @@ func calcular_velocidad():
 	
 	if is_on_floor():
 		velocidad_externa.x *= 0.8
+		velocidad_externa.y = 0
+	elif abs(velocidad_interna.y) < 10:
+		velocidad_interna.y = 0
 	velocidad_externa *= 0.99
 	velocidad_interna *= 0.95
 	velocity = velocidad_externa+velocidad_interna

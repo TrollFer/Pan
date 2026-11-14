@@ -14,8 +14,10 @@ func entrar():
 	if estado == 'pan':
 		personaje.recurso_estado = load("res://Recursos/pan.tres")
 	
-	
+	for i in range(1, 33):
+		personaje.set_collision_mask_value(i, false) #Desactivamos todas
 	for capa in personaje.recurso_estado.colision:
 		personaje.set_collision_mask_value(capa, true)
 		#Para las capas de colision
+	personaje.sprite.sprite_frames = personaje.recurso_estado.animaciones
 	

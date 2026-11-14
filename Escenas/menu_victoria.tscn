@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=3 uid="uid://bliqd3io2pmco"]
+
+[ext_resource type="FontFile" uid="uid://dyiw4yclae8gl" path="res://Assets/Matcha Style.otf" id="1_3w505"]
+[ext_resource type="Script" uid="uid://b463rc3agcwjc" path="res://Scripts/menu_victoria.gd" id="1_q6qao"]
+
+[node name="Menu_victoria" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_q6qao")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -188.0
+offset_right = 190.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.64628947, 0.5036574, 0.2535097, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -146.0
+offset_right = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 100
+
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_3w505")
+theme_override_font_sizes/font_size = 48
+text = "¡Victoria!"
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 100
+
+[node name="Siguiente" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_3w505")
+text = "Siguiente nivel"
+
+[node name="MarginContainer3" type="MarginContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 40
+
+[node name="Reiniciar" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_3w505")
+text = "Volver a intentar"
+
+[node name="MarginContainer4" type="MarginContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 40
+
+[node name="Salir" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_3w505")
+text = "Salir"
+
+[node name="MarginContainer5" type="MarginContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 40
+
+[connection signal="pressed" from="Control/VBoxContainer/Siguiente" to="." method="_on_siguiente_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Salir" to="." method="_on_salir_pressed"]

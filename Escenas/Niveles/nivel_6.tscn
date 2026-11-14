@@ -1,0 +1,565 @@
+[gd_scene load_steps=10 format=3 uid="uid://bv5t3ufel00v1"]
+
+[ext_resource type="Script" uid="uid://bhmpnwigak4qq" path="res://Clases/Nivel.gd" id="1_fuvjj"]
+[ext_resource type="PackedScene" uid="uid://cakn36ironlys" path="res://Escenas/suelo.tscn" id="2_mclvq"]
+[ext_resource type="PackedScene" uid="uid://briivn5ge3dtw" path="res://Escenas/coladero.tscn" id="3_lfge7"]
+[ext_resource type="PackedScene" uid="uid://2hr8g2qyvu7r" path="res://Escenas/pancracio.tscn" id="4_vvxo4"]
+[ext_resource type="Texture2D" uid="uid://dxgysf7a6k0r7" path="res://Assets/flecha-correcta.png" id="5_rewf1"]
+[ext_resource type="PackedScene" uid="uid://butel0ogsiawu" path="res://Escenas/gota.tscn" id="6_msn58"]
+[ext_resource type="PackedScene" uid="uid://blkjmhqhxham3" path="res://Escenas/ventana.tscn" id="7_mclvq"]
+[ext_resource type="PackedScene" uid="uid://de5wac5sb5il7" path="res://Escenas/saco.tscn" id="8_lfge7"]
+[ext_resource type="PackedScene" uid="uid://kdkgakdojnsd" path="res://Escenas/horno.tscn" id="9_vvxo4"]
+
+[node name="Nivel_6" type="Node2D"]
+script = ExtResource("1_fuvjj")
+numero = 5
+metadata/_custom_type_script = "uid://bhmpnwigak4qq"
+
+[node name="Suelo" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(341.99997, 284.00003)
+
+[node name="Suelo2" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1623, 288)
+
+[node name="Suelo3" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(342, 452)
+
+[node name="Suelo4" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1623, 455.99997)
+
+[node name="Suelo5" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(342, 608)
+
+[node name="Suelo6" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1623, 611.99994)
+
+[node name="Suelo7" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(342.00003, 775.99994)
+
+[node name="Suelo8" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1623, 779.9999)
+
+[node name="Coladero" parent="." instance=ExtResource("3_lfge7")]
+position = Vector2(776, 293)
+
+[node name="Coladero2" parent="." instance=ExtResource("3_lfge7")]
+position = Vector2(979, 294)
+
+[node name="Coladero3" parent="." instance=ExtResource("3_lfge7")]
+position = Vector2(1179, 294)
+
+[node name="Coladero4" parent="." instance=ExtResource("3_lfge7")]
+position = Vector2(785, 4292)
+
+[node name="Coladero5" parent="." instance=ExtResource("3_lfge7")]
+position = Vector2(988, 4293)
+
+[node name="Coladero6" parent="." instance=ExtResource("3_lfge7")]
+position = Vector2(1188, 4293)
+
+[node name="Suelo9" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(343, 943)
+
+[node name="Suelo10" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1624, 946.99994)
+
+[node name="Suelo11" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(343.00003, 1111)
+
+[node name="Suelo12" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1624, 1114.9999)
+
+[node name="Suelo13" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(343.00003, 1267)
+
+[node name="Suelo14" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1624, 1270.9999)
+
+[node name="Suelo15" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(343.00006, 1434.9999)
+
+[node name="Suelo16" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1624, 1438.9998)
+
+[node name="Pancracio" parent="." instance=ExtResource("4_vvxo4")]
+position = Vector2(311, 157)
+
+[node name="FlechaCorrecta" type="Sprite2D" parent="."]
+position = Vector2(1014, -115.99997)
+rotation = 1.5707964
+scale = Vector2(0.4125638, 0.4125638)
+texture = ExtResource("5_rewf1")
+
+[node name="FlechaCorrecta2" type="Sprite2D" parent="."]
+position = Vector2(1003.99994, 947.0001)
+rotation = 1.5707964
+scale = Vector2(0.4125638, 0.4125638)
+texture = ExtResource("5_rewf1")
+
+[node name="FlechaCorrecta3" type="Sprite2D" parent="."]
+position = Vector2(1180.9999, 2559)
+rotation = 1.5707964
+scale = Vector2(0.4125638, 0.4125638)
+texture = ExtResource("5_rewf1")
+
+[node name="Gota" parent="." instance=ExtResource("6_msn58")]
+position = Vector2(1006, 1443)
+
+[node name="Suelo17" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(344, 1603.9999)
+
+[node name="Suelo18" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1625, 1607.9999)
+
+[node name="Suelo19" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(344, 1759.9999)
+
+[node name="Suelo20" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1625, 1763.9998)
+
+[node name="Suelo21" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(344.00003, 1927.9998)
+
+[node name="Suelo22" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1625, 1931.9998)
+
+[node name="Suelo23" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(345, 2095)
+
+[node name="Suelo24" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1626, 2098.9998)
+
+[node name="Suelo25" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(345.00003, 2263)
+
+[node name="Suelo26" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1626, 2266.9998)
+
+[node name="Suelo27" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(345.00003, 2419)
+
+[node name="Suelo28" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1626, 2422.9998)
+
+[node name="Suelo29" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(345.00006, 2586.9998)
+
+[node name="Suelo30" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1626, 2590.9995)
+
+[node name="Suelo31" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(344, 2755)
+
+[node name="Suelo32" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1625, 2759)
+
+[node name="Suelo33" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(344.99997, 2922.0002)
+
+[node name="Suelo34" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1626, 2926)
+
+[node name="Suelo35" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(345, 3090.0002)
+
+[node name="Suelo36" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1626, 3094)
+
+[node name="Suelo37" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(345, 3246.0002)
+
+[node name="Suelo38" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1626, 3250)
+
+[node name="Suelo39" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(345.00003, 3414)
+
+[node name="Suelo40" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1626, 3417.9998)
+
+[node name="Suelo41" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(348.00003, 3578)
+
+[node name="Suelo42" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1629, 3581.9995)
+
+[node name="Suelo43" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(348.00003, 3734)
+
+[node name="Suelo44" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1629, 3737.9995)
+
+[node name="Suelo45" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(348.00006, 3901.9995)
+
+[node name="Suelo46" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1629, 3905.9995)
+
+[node name="Suelo47" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(347, 4070)
+
+[node name="Suelo48" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1628, 4074)
+
+[node name="Suelo49" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(347.99997, 4237)
+
+[node name="Suelo50" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1629, 4241)
+
+[node name="Suelo51" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(348, 4405)
+
+[node name="Suelo52" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1629, 4409)
+
+[node name="Suelo53" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(348, 4561)
+
+[node name="Suelo54" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1629, 4565)
+
+[node name="Suelo55" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(348.00003, 4729)
+
+[node name="Suelo56" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1629, 4732.9995)
+
+[node name="Suelo57" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(349, 4894)
+
+[node name="Suelo58" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1630, 4897.9995)
+
+[node name="Suelo59" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(349, 5050)
+
+[node name="Suelo60" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1630, 5053.9995)
+
+[node name="Suelo61" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(349.00003, 5217.9995)
+
+[node name="Suelo62" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1630, 5221.9995)
+
+[node name="Suelo63" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(352.00003, 5381.9995)
+
+[node name="Suelo64" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1633, 5385.999)
+
+[node name="Suelo65" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(352.00003, 5537.9995)
+
+[node name="Suelo66" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1633, 5541.999)
+
+[node name="Suelo67" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(352.00006, 5705.999)
+
+[node name="Suelo68" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1633, 5709.999)
+
+[node name="Suelo69" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(351, 5873.9995)
+
+[node name="Suelo70" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1632, 5877.9995)
+
+[node name="Suelo71" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(351.99997, 6040.9995)
+
+[node name="Suelo72" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1633, 6044.9995)
+
+[node name="Suelo73" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(352, 6208.9995)
+
+[node name="Suelo74" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1633, 6212.9995)
+
+[node name="Suelo75" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(352, 6364.9995)
+
+[node name="Suelo76" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1633, 6368.9995)
+
+[node name="Suelo77" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(352.00003, 6532.9995)
+
+[node name="Suelo78" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1633, 6536.999)
+
+[node name="Suelo79" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(355, 6697)
+
+[node name="Suelo80" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1636, 6701)
+
+[node name="Suelo81" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(355, 6853)
+
+[node name="Suelo82" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1636, 6857)
+
+[node name="Suelo83" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(355.00003, 7021)
+
+[node name="Suelo84" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1636, 7024.999)
+
+[node name="Suelo85" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(356, 7186)
+
+[node name="Suelo86" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1637, 7189.999)
+
+[node name="Suelo87" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(356, 7342)
+
+[node name="Suelo88" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1637, 7345.999)
+
+[node name="Suelo89" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(356.00003, 7509.999)
+
+[node name="Suelo90" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1637, 7513.999)
+
+[node name="Suelo91" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(359.00003, 7673.999)
+
+[node name="Suelo92" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1640, 7677.999)
+
+[node name="Suelo93" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(359.00003, 7829.999)
+
+[node name="Suelo94" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1640, 7833.999)
+
+[node name="Suelo95" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(359.00006, 7997.999)
+
+[node name="Suelo96" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1640, 8001.999)
+
+[node name="Suelo97" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(358, 8165.999)
+
+[node name="Suelo98" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1639, 8169.999)
+
+[node name="Suelo99" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(358.99997, 8332.999)
+
+[node name="Suelo100" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1640, 8336.999)
+
+[node name="Suelo101" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(359, 8500.999)
+
+[node name="Suelo102" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1640, 8504.999)
+
+[node name="Suelo103" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(359, 8656.999)
+
+[node name="Suelo104" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1640, 8660.999)
+
+[node name="Suelo105" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(359.00003, 8824.999)
+
+[node name="Suelo106" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1640, 8828.999)
+
+[node name="Suelo107" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(358, 8992)
+
+[node name="Suelo108" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1639, 8995.999)
+
+[node name="Suelo109" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(358, 9148)
+
+[node name="Suelo110" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1639, 9151.999)
+
+[node name="Suelo111" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(358.00003, 9315.999)
+
+[node name="Suelo112" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1639, 9319.999)
+
+[node name="Suelo113" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(361.00003, 9479.999)
+
+[node name="Suelo114" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1642, 9483.999)
+
+[node name="Suelo115" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(361.00003, 9635.999)
+
+[node name="Suelo116" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1642, 9639.999)
+
+[node name="Suelo117" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(361.00006, 9803.999)
+
+[node name="Suelo118" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1642, 9807.999)
+
+[node name="Suelo119" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(360, 9971.999)
+
+[node name="Suelo120" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1641, 9975.999)
+
+[node name="Suelo121" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(360.99997, 10138.999)
+
+[node name="Suelo122" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1642, 10142.999)
+
+[node name="Suelo123" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(361, 10306.999)
+
+[node name="Suelo124" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1642, 10310.999)
+
+[node name="Suelo125" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(361, 10462.999)
+
+[node name="Suelo126" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1642, 10466.999)
+
+[node name="Suelo127" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(361.00003, 10630.999)
+
+[node name="Suelo128" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1642, 10634.999)
+
+[node name="Suelo129" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(364, 10795)
+
+[node name="Suelo130" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1645, 10799)
+
+[node name="Suelo131" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(364, 10951)
+
+[node name="Suelo132" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1645, 10955)
+
+[node name="Suelo133" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(364.00003, 11119)
+
+[node name="Suelo134" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1645, 11122.999)
+
+[node name="Suelo135" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(365, 11284)
+
+[node name="Suelo136" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1646, 11287.999)
+
+[node name="Suelo137" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(365, 11440)
+
+[node name="Suelo138" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1646, 11443.999)
+
+[node name="Suelo139" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(365.00003, 11607.999)
+
+[node name="Suelo140" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1646, 11611.999)
+
+[node name="Suelo141" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(368.00003, 11771.999)
+
+[node name="Suelo142" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1649, 11775.999)
+
+[node name="Suelo143" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(368.00003, 11927.999)
+
+[node name="Suelo144" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1649, 11931.999)
+
+[node name="Suelo145" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(368.00006, 12095.999)
+
+[node name="Suelo146" parent="." instance=ExtResource("2_mclvq")]
+position = Vector2(1649, 12099.999)
+
+[node name="Ventana" parent="." instance=ExtResource("7_mclvq")]
+position = Vector2(757, 1742)
+
+[node name="Ventana2" parent="." instance=ExtResource("7_mclvq")]
+position = Vector2(969.00006, 1744)
+
+[node name="Ventana3" parent="." instance=ExtResource("7_mclvq")]
+position = Vector2(1184, 1742.0001)
+
+[node name="FlechaCorrecta4" type="Sprite2D" parent="."]
+position = Vector2(797.99994, 4858)
+rotation = 1.5707964
+scale = Vector2(0.4125638, 0.4125638)
+texture = ExtResource("5_rewf1")
+
+[node name="FlechaCorrecta5" type="Sprite2D" parent="."]
+position = Vector2(1002.9999, 7378.9995)
+rotation = 1.5707964
+scale = Vector2(0.4125638, 0.4125638)
+texture = ExtResource("5_rewf1")
+
+[node name="FlechaCorrecta6" type="Sprite2D" parent="."]
+position = Vector2(1191, 9841)
+rotation = 1.5707964
+scale = Vector2(0.4125638, 0.4125638)
+texture = ExtResource("5_rewf1")
+
+[node name="Gota2" parent="." instance=ExtResource("6_msn58")]
+position = Vector2(809, 6296)
+
+[node name="Ventana4" parent="." instance=ExtResource("7_mclvq")]
+position = Vector2(791, 6612.616)
+
+[node name="Ventana5" parent="." instance=ExtResource("7_mclvq")]
+position = Vector2(1003.00006, 6614.616)
+
+[node name="Ventana6" parent="." instance=ExtResource("7_mclvq")]
+position = Vector2(1218, 6612.616)
+
+[node name="Saco" parent="." instance=ExtResource("8_lfge7")]
+position = Vector2(1188, 3723)
+
+[node name="Coladero7" parent="." instance=ExtResource("3_lfge7")]
+position = Vector2(788, 9155)
+
+[node name="Coladero8" parent="." instance=ExtResource("3_lfge7")]
+position = Vector2(991, 9156)
+
+[node name="Coladero9" parent="." instance=ExtResource("3_lfge7")]
+position = Vector2(1191, 9156)
+
+[node name="Saco2" parent="." instance=ExtResource("8_lfge7")]
+position = Vector2(999, 8622)
+
+[node name="Gota3" parent="." instance=ExtResource("6_msn58")]
+position = Vector2(1197, 11525)
+
+[node name="Coladero10" parent="." instance=ExtResource("3_lfge7")]
+position = Vector2(807, 12108)
+
+[node name="Coladero11" parent="." instance=ExtResource("3_lfge7")]
+position = Vector2(1011, 12110)
+
+[node name="Coladero12" parent="." instance=ExtResource("3_lfge7")]
+position = Vector2(1216, 12110)
+
+[node name="Horno" parent="." instance=ExtResource("9_vvxo4")]
+position = Vector2(811, 11919)
