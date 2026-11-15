@@ -1,5 +1,6 @@
 extends Estado
 
+@onready var lanzar: AudioStreamPlayer2D = $"../../Lanzar"
 var objetivo : Vector2
 var dir : Vector2
 var masita_escena = preload("res://Escenas/masita.tscn") #Trozo de masa que hereda de pancracio
@@ -21,6 +22,7 @@ func procesamiento():
 		camara.enabled = true
 
 func entrar():
+	lanzar.playing = true
 	objetivo = personaje.get_global_mouse_position()
 	dir = (objetivo-personaje.global_position).normalized()
 	masita = masita_escena.instantiate()

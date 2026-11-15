@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dmw7hbvu65t2g"]
+[gd_scene load_steps=16 format=3 uid="uid://dmw7hbvu65t2g"]
 
 [ext_resource type="Script" uid="uid://bhmpnwigak4qq" path="res://Clases/Nivel.gd" id="1_gj223"]
 [ext_resource type="PackedScene" uid="uid://cakn36ironlys" path="res://Escenas/suelo.tscn" id="2_3c2k2"]
@@ -12,6 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://blkjmhqhxham3" path="res://Escenas/ventana.tscn" id="10_yeyq8"]
 [ext_resource type="PackedScene" uid="uid://kdkgakdojnsd" path="res://Escenas/horno.tscn" id="12_gmctc"]
 [ext_resource type="PackedScene" uid="uid://de5wac5sb5il7" path="res://Escenas/saco.tscn" id="12_nqjrd"]
+[ext_resource type="Texture2D" uid="uid://dxgysf7a6k0r7" path="res://Assets/flecha-correcta.png" id="13_etao8"]
+[ext_resource type="PackedScene" uid="uid://trl4u1vkq2ga" path="res://Escenas/pared.tscn" id="14_k5ypl"]
+[ext_resource type="PackedScene" uid="uid://b3y4pryrtktp5" path="res://Escenas/menu_pausa.tscn" id="15_k5ypl"]
 
 [node name="Nivel1" type="Node2D"]
 process_mode = 3
@@ -26,7 +29,7 @@ offset_bottom = -508.0
 theme_override_colors/font_color = Color(0.37204057, 0.71703726, 0.33557278, 1)
 theme_override_fonts/font = ExtResource("2_lswwr")
 theme_override_font_sizes/font_size = 30
-text = "Atraviesa coladeros "
+text = "Atraviesas coladeros "
 metadata/_edit_use_anchors_ = true
 
 [node name="TextEdit7" type="Label" parent="."]
@@ -42,20 +45,20 @@ text = "HARINa
 metadata/_edit_use_anchors_ = true
 
 [node name="TextEdit15" type="Label" parent="."]
-offset_left = -6451.0
-offset_top = -2304.0
-offset_right = -5869.0
-offset_bottom = -2077.0
+offset_left = -6163.0
+offset_top = -2306.0
+offset_right = -5581.0
+offset_bottom = -2079.0
 theme_override_fonts/font = ExtResource("2_lswwr")
 theme_override_font_sizes/font_size = 64
 text = "Este es pancracio"
 metadata/_edit_use_anchors_ = true
 
 [node name="TextEdit16" type="Label" parent="."]
-offset_left = -5746.0
-offset_top = -2307.0
-offset_right = -5164.0
-offset_bottom = -2080.0
+offset_left = -5458.0
+offset_top = -2309.0
+offset_right = -4876.0
+offset_bottom = -2082.0
 theme_override_fonts/font = ExtResource("2_lswwr")
 theme_override_font_sizes/font_size = 64
 text = "Su objetivo es 
@@ -63,10 +66,10 @@ cocinarse en pan"
 metadata/_edit_use_anchors_ = true
 
 [node name="TextEdit17" type="Label" parent="."]
-offset_left = -5049.0
-offset_top = -2357.0
-offset_right = -3965.0
-offset_bottom = -2126.0
+offset_left = -4761.0
+offset_top = -2359.0
+offset_right = -3677.0
+offset_bottom = -2128.0
 theme_override_fonts/font = ExtResource("2_lswwr")
 theme_override_font_sizes/font_size = 64
 text = "Pero todavía es harina,
@@ -75,14 +78,14 @@ en masa y entrar en el horno "
 metadata/_edit_use_anchors_ = true
 
 [node name="TextEdit18" type="Label" parent="."]
-offset_left = -3913.0
-offset_top = -2360.0
-offset_right = -2205.0
-offset_bottom = -2129.0
+offset_left = -3625.0
+offset_top = -2362.0
+offset_right = -1917.0
+offset_bottom = -2131.0
 theme_override_fonts/font = ExtResource("2_lswwr")
 theme_override_font_sizes/font_size = 64
-text = "cada estado tiene distinitas ventajas y desventajas
-que usarás para llegar al horno"
+text = "cada estado tiene distintas ventajas 
+y desventajas que usarás para llegar al horno"
 metadata/_edit_use_anchors_ = true
 
 [node name="TextEdit8" type="Label" parent="."]
@@ -193,10 +196,10 @@ text = "Usa el saco para
 volver a ser harina"
 
 [node name="TextEdit11" type="Label" parent="."]
-offset_left = 2532.0002
-offset_top = -309.0
-offset_right = 3049.0002
-offset_bottom = -271.0
+offset_left = 2516.0
+offset_top = -171.0
+offset_right = 3033.0
+offset_bottom = -133.0
 theme_override_colors/font_color = Color(0.9490196, 0.5137255, 0.12156863, 1)
 theme_override_fonts/font = ExtResource("2_lswwr")
 theme_override_font_sizes/font_size = 32
@@ -226,7 +229,7 @@ position = Vector2(1181, 349.99997)
 position = Vector2(2529, 194.00003)
 
 [node name="Suelo21" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(2641.0002, -658)
+position = Vector2(2625, -520)
 rotation = 1.5707964
 
 [node name="Suelo14" parent="." instance=ExtResource("2_3c2k2")]
@@ -311,6 +314,9 @@ position = Vector2(2528, 673)
 [node name="Suelo33" parent="." instance=ExtResource("2_3c2k2")]
 position = Vector2(3202.0002, 516)
 
+[node name="Suelo73" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(3205.0002, 673.00006)
+
 [node name="Suelo34" parent="." instance=ExtResource("2_3c2k2")]
 position = Vector2(3320.0002, -392.99982)
 
@@ -338,6 +344,18 @@ position = Vector2(5896, 517)
 [node name="Suelo42" parent="." instance=ExtResource("2_3c2k2")]
 position = Vector2(5896, 673.99994)
 
+[node name="Suelo69" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(6572, 195)
+
+[node name="Suelo70" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(6572, 351.99997)
+
+[node name="Suelo71" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(6571, 517)
+
+[node name="Suelo72" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(6571, 673.99994)
+
 [node name="Suelo43" parent="." instance=ExtResource("2_3c2k2")]
 position = Vector2(-840, 515)
 
@@ -360,22 +378,22 @@ position = Vector2(-1513.9999, 350)
 position = Vector2(-2859.9998, 193.00003)
 
 [node name="Suelo59" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(-5663, -1816.9999)
+position = Vector2(-5375, -1818.9999)
 
 [node name="Suelo60" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(-6338, -1817)
+position = Vector2(-6050, -1819)
 
 [node name="Suelo61" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(-4988, -1817)
+position = Vector2(-4700, -1819)
 
 [node name="Suelo62" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(-3639, -1816.9999)
+position = Vector2(-3351, -1818.9999)
 
 [node name="Suelo63" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(-4314, -1817)
+position = Vector2(-4026, -1819)
 
 [node name="Suelo64" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(-2964, -1817)
+position = Vector2(-2676, -1819)
 
 [node name="Suelo50" parent="." instance=ExtResource("2_3c2k2")]
 position = Vector2(-2859.9998, 350)
@@ -411,8 +429,20 @@ position = Vector2(-2179.9998, -385.9999)
 position = Vector2(-2427, -798)
 rotation = 1.5707964
 
+[node name="Suelo74" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-2426.0002, -1389)
+rotation = 1.5707964
+
 [node name="Suelo11" parent="." instance=ExtResource("2_3c2k2")]
 position = Vector2(-1544, -787)
+rotation = 1.5707964
+
+[node name="Suelo75" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-1544.0001, -1462)
+rotation = 1.5707964
+
+[node name="Suelo76" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(-1544, -2137)
 rotation = 1.5707964
 
 [node name="Suelo12" parent="." instance=ExtResource("2_3c2k2")]
@@ -421,7 +451,7 @@ rotation = 1.5707964
 scale = Vector2(0.2082112, 0.6062224)
 
 [node name="Pancracio" parent="." instance=ExtResource("3_lswwr")]
-position = Vector2(-5907, -1959)
+position = Vector2(-5619, -1961)
 
 [node name="Coladero" parent="." instance=ExtResource("4_llk6u")]
 position = Vector2(-1742, -377)
@@ -435,7 +465,7 @@ potencia = 900
 position = Vector2(1356, -110)
 
 [node name="Puerta" parent="." instance=ExtResource("8_rbs6h")]
-position = Vector2(2558.0002, -142)
+position = Vector2(2576, 3)
 
 [node name="Boton" parent="." node_paths=PackedStringArray("objetivo") instance=ExtResource("9_310hg")]
 position = Vector2(3428.0002, 92)
@@ -456,5 +486,18 @@ position = Vector2(4787, 49)
 [node name="Gota2" parent="." instance=ExtResource("7_l8lnw")]
 position = Vector2(5780, -98)
 
-[node name="Coladero3" parent="." instance=ExtResource("4_llk6u")]
-position = Vector2(2550.0002, 45)
+[node name="FlechaCorrecta" type="Sprite2D" parent="."]
+position = Vector2(-1933, -2049)
+rotation = 1.5707964
+texture = ExtResource("13_etao8")
+
+[node name="Pared" parent="." instance=ExtResource("14_k5ypl")]
+position = Vector2(-3280, 4020)
+
+[node name="Pared2" parent="." instance=ExtResource("14_k5ypl")]
+position = Vector2(-6467, -2061)
+
+[node name="Pared3" parent="." instance=ExtResource("14_k5ypl")]
+position = Vector2(6998, 436)
+
+[node name="Menu_pausa" parent="." instance=ExtResource("15_k5ypl")]

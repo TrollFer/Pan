@@ -35,7 +35,7 @@ metadata/_custom_type_script = "uid://8dsh76ca7jj"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-8, 6.999997)
-scale = Vector2(0.048874788, 0.035937347)
+scale = Vector2(0.0755269, 0.055534493)
 sprite_frames = SubResource("SpriteFrames_udmpr")
 
 [node name="Interaccion" type="Area2D" parent="."]

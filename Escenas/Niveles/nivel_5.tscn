@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bj5et57ktjs4q"]
+[gd_scene load_steps=13 format=3 uid="uid://bj5et57ktjs4q"]
 
 [ext_resource type="Script" uid="uid://bhmpnwigak4qq" path="res://Clases/Nivel.gd" id="1_kh7by"]
 [ext_resource type="PackedScene" uid="uid://cakn36ironlys" path="res://Escenas/suelo.tscn" id="2_qyd20"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://kdkgakdojnsd" path="res://Escenas/horno.tscn" id="9_eva7v"]
 [ext_resource type="PackedScene" uid="uid://butel0ogsiawu" path="res://Escenas/gota.tscn" id="9_qyd20"]
 [ext_resource type="Texture2D" uid="uid://dxgysf7a6k0r7" path="res://Assets/flecha-correcta.png" id="11_86gyk"]
+[ext_resource type="PackedScene" uid="uid://trl4u1vkq2ga" path="res://Escenas/pared.tscn" id="12_0bgiv"]
 
 [node name="Nivel_5" type="Node2D"]
 script = ExtResource("1_kh7by")
@@ -39,6 +40,15 @@ position = Vector2(342, 657)
 [node name="Suelo4" parent="." instance=ExtResource("2_qyd20")]
 position = Vector2(344, 815)
 
+[node name="Suelo22" parent="." instance=ExtResource("2_qyd20")]
+position = Vector2(-331.99994, 494)
+
+[node name="Suelo23" parent="." instance=ExtResource("2_qyd20")]
+position = Vector2(-331.99994, 655)
+
+[node name="Suelo24" parent="." instance=ExtResource("2_qyd20")]
+position = Vector2(-329.99994, 813)
+
 [node name="Suelo5" parent="." instance=ExtResource("2_qyd20")]
 position = Vector2(1015, 340)
 
@@ -54,6 +64,10 @@ position = Vector2(1019, 817)
 [node name="Suelo19" parent="." instance=ExtResource("2_qyd20")]
 position = Vector2(2305, 1220)
 
+[node name="Suelo25" parent="." instance=ExtResource("2_qyd20")]
+position = Vector2(2736.0002, 1242)
+rotation = 1.5707964
+
 [node name="Suelo11" parent="." instance=ExtResource("2_qyd20")]
 position = Vector2(2301, 343)
 
@@ -68,6 +82,10 @@ position = Vector2(2305, 820)
 
 [node name="Suelo20" parent="." instance=ExtResource("2_qyd20")]
 position = Vector2(1632.0002, 1220)
+
+[node name="Suelo26" parent="." instance=ExtResource("2_qyd20")]
+position = Vector2(1216, 1246.0001)
+rotation = 1.5707964
 
 [node name="Suelo15" parent="." instance=ExtResource("2_qyd20")]
 position = Vector2(2976, 345)
@@ -134,3 +152,9 @@ position = Vector2(1680, 97)
 rotation = 1.5707964
 scale = Vector2(0.20014915, 0.20014915)
 texture = ExtResource("11_86gyk")
+
+[node name="Pared" parent="." instance=ExtResource("12_0bgiv")]
+position = Vector2(-749, 572)
+
+[node name="Pared2" parent="." instance=ExtResource("12_0bgiv")]
+position = Vector2(3407, 578)

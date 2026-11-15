@@ -1,9 +1,14 @@
 extends Estado
 
 var estado: String #me refiero a estado de masa, harina o pan
-	
+
+@onready var recogida: AudioStreamPlayer2D = $"../../Recogida"
+
+
+
 func transformacion(nuevo_estado: String):
 	estado = nuevo_estado
+	recogida.playing = true
 	maquina.cambiar(nombre)
 
 func entrar():

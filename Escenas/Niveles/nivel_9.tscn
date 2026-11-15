@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://buxornuoe3dn6"]
+
+[ext_resource type="Script" uid="uid://bhmpnwigak4qq" path="res://Clases/Nivel.gd" id="1_pkq1x"]
+[ext_resource type="PackedScene" uid="uid://cakn36ironlys" path="res://Escenas/suelo.tscn" id="2_q05mu"]
+[ext_resource type="PackedScene" uid="uid://2hr8g2qyvu7r" path="res://Escenas/pancracio.tscn" id="3_hg26g"]
+[ext_resource type="PackedScene" uid="uid://briivn5ge3dtw" path="res://Escenas/coladero.tscn" id="4_q56mt"]
+[ext_resource type="PackedScene" uid="uid://butel0ogsiawu" path="res://Escenas/gota.tscn" id="5_u58qm"]
+[ext_resource type="PackedScene" uid="uid://x2vm7q58f2k4" path="res://Escenas/fuelle.tscn" id="6_lk7cl"]
+[ext_resource type="PackedScene" uid="uid://blkjmhqhxham3" path="res://Escenas/ventana.tscn" id="7_q56mt"]
+[ext_resource type="PackedScene" uid="uid://kdkgakdojnsd" path="res://Escenas/horno.tscn" id="8_u58qm"]
+[ext_resource type="PackedScene" uid="uid://trl4u1vkq2ga" path="res://Escenas/pared.tscn" id="9_lk7cl"]
+
+[node name="Nivel_9" type="Node2D"]
+script = ExtResource("1_pkq1x")
+numero = 8
+metadata/_custom_type_script = "uid://bhmpnwigak4qq"
+
+[node name="Suelo" parent="." instance=ExtResource("2_q05mu")]
+position = Vector2(342.00003, 218.00002)
+
+[node name="Suelo2" parent="." instance=ExtResource("2_q05mu")]
+position = Vector2(601.0001, 651.00006)
+rotation = 1.5707964
+
+[node name="Suelo3" parent="." instance=ExtResource("2_q05mu")]
+position = Vector2(597.99994, 1332)
+rotation = 1.5707964
+
+[node name="Suelo4" parent="." instance=ExtResource("2_q05mu")]
+position = Vector2(1579.0001, 1336)
+rotation = 1.5707964
+
+[node name="Suelo5" parent="." instance=ExtResource("2_q05mu")]
+position = Vector2(1583.0001, 653.00006)
+rotation = 1.5707964
+scale = Vector2(0.54407525, 1.5841156)
+
+[node name="Pancracio" parent="." instance=ExtResource("3_hg26g")]
+position = Vector2(184, 87)
+
+[node name="Coladero" parent="." instance=ExtResource("4_q56mt")]
+position = Vector2(778, 223)
+
+[node name="Coladero2" parent="." instance=ExtResource("4_q56mt")]
+position = Vector2(981, 223)
+
+[node name="Coladero3" parent="." instance=ExtResource("4_q56mt")]
+position = Vector2(1184, 223)
+
+[node name="Coladero4" parent="." instance=ExtResource("4_q56mt")]
+position = Vector2(1387, 223)
+
+[node name="Gota" parent="." instance=ExtResource("5_u58qm")]
+position = Vector2(1385, -29)
+
+[node name="Fuelle" parent="." instance=ExtResource("6_lk7cl")]
+position = Vector2(1403, 1588)
+potencia = 3000
+
+[node name="Ventana" parent="." instance=ExtResource("7_q56mt")]
+position = Vector2(794.00006, 711)
+
+[node name="Ventana2" parent="." instance=ExtResource("7_q56mt")]
+position = Vector2(1068, 1294)
+
+[node name="Ventana3" parent="." instance=ExtResource("7_q56mt")]
+position = Vector2(1214, 1011.0001)
+
+[node name="Suelo6" parent="." instance=ExtResource("2_q05mu")]
+position = Vector2(843, 1744)
+
+[node name="Suelo7" parent="." instance=ExtResource("2_q05mu")]
+position = Vector2(1518, 1742)
+
+[node name="Suelo8" parent="." instance=ExtResource("2_q05mu")]
+position = Vector2(1831, 218.00003)
+
+[node name="Horno" parent="." instance=ExtResource("8_u58qm")]
+position = Vector2(1777, 29)
+
+[node name="Pared" parent="." instance=ExtResource("9_lk7cl")]
+position = Vector2(2090, -190)
+
+[node name="Pared2" parent="." instance=ExtResource("9_lk7cl")]
+position = Vector2(-74, -24)

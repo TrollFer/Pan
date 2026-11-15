@@ -1,0 +1,255 @@
+[gd_scene load_steps=10 format=3 uid="uid://co00fp5vcwuaf"]
+
+[ext_resource type="Script" uid="uid://bhmpnwigak4qq" path="res://Clases/Nivel.gd" id="1_sfpuu"]
+[ext_resource type="Script" uid="uid://d1sgt5pwf3ida" path="res://Scripts/menu_inicio.gd" id="2_4dn7x"]
+[ext_resource type="FontFile" uid="uid://dyiw4yclae8gl" path="res://Assets/Matcha Style.otf" id="2_xmix5"]
+[ext_resource type="PackedScene" uid="uid://2hr8g2qyvu7r" path="res://Escenas/pancracio.tscn" id="4_puat8"]
+[ext_resource type="PackedScene" uid="uid://x2vm7q58f2k4" path="res://Escenas/fuelle.tscn" id="5_q046x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dn7x"]
+bg_color = Color(0.8901961, 0.6117647, 0.44705883, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgyrj"]
+bg_color = Color(0.5839208, 0.34323016, 0.19251952, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uuca6"]
+bg_color = Color(0.8901961, 0.6117647, 0.44705883, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dujc3"]
+bg_color = Color(0.57373565, 0.33655804, 0.18796751, 1)
+
+[node name="Nivel_0" type="Node2D"]
+script = ExtResource("1_sfpuu")
+numero = -1
+metadata/_custom_type_script = "uid://bhmpnwigak4qq"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(574, 326)
+
+[node name="Menu_inicio" type="CanvasLayer" parent="."]
+script = ExtResource("2_4dn7x")
+
+[node name="ColorRect" type="ColorRect" parent="Menu_inicio"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.13725491)
+
+[node name="Control" type="Control" parent="Menu_inicio"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu_inicio/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -445.0
+offset_top = -275.0
+offset_right = 445.0
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="Menu_inicio/Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xmix5")
+theme_override_font_sizes/font_size = 96
+text = "LAS AVENTURAS DE 
+PANCRACIO"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu_inicio/Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="Comenzar" type="Button" parent="Menu_inicio/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_xmix5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_4dn7x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jgyrj")
+text = "Comenzar"
+
+[node name="Salir" type="Button" parent="Menu_inicio/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_xmix5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_uuca6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dujc3")
+text = "Salir"
+
+[node name="Pancracio" parent="." instance=ExtResource("4_puat8")]
+position = Vector2(405, 165)
+scale = Vector2(0.44830835, 0.44830835)
+motion_mode = 1
+
+[node name="Pancracio2" parent="." instance=ExtResource("4_puat8")]
+position = Vector2(811, 262)
+scale = Vector2(0.49466434, 0.49466434)
+motion_mode = 1
+
+[node name="Pancracio3" parent="." instance=ExtResource("4_puat8")]
+position = Vector2(130, 310)
+scale = Vector2(0.49466434, 0.49466434)
+
+[node name="Pancracio5" parent="." instance=ExtResource("4_puat8")]
+position = Vector2(1099, 420)
+scale = Vector2(0.49466434, 0.49466434)
+motion_mode = 1
+
+[node name="Pancracio6" parent="." instance=ExtResource("4_puat8")]
+position = Vector2(320, 484)
+scale = Vector2(0.49466434, 0.49466434)
+motion_mode = 1
+
+[node name="Pancracio7" parent="." instance=ExtResource("4_puat8")]
+position = Vector2(564, 357.99997)
+scale = Vector2(0.49466434, 0.49466434)
+motion_mode = 1
+
+[node name="Pancracio8" parent="." instance=ExtResource("4_puat8")]
+position = Vector2(85, 56)
+scale = Vector2(0.49466434, 0.49466434)
+motion_mode = 1
+
+[node name="Pancracio9" parent="." instance=ExtResource("4_puat8")]
+position = Vector2(904, 625)
+scale = Vector2(0.49466434, 0.49466434)
+
+[node name="Pancracio4" parent="." instance=ExtResource("4_puat8")]
+position = Vector2(984, 96)
+scale = Vector2(0.49466434, 0.49466434)
+motion_mode = 1
+
+[node name="Fuelle" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(96, 730)
+rotation = 0.5235988
+potencia = 4000
+
+[node name="Fuelle2" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(272.99997, 734)
+rotation = 0.2617994
+potencia = 4000
+
+[node name="Fuelle3" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(452, 738)
+rotation = -0.2617994
+potencia = 4000
+
+[node name="Fuelle4" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(654, 735)
+rotation = -1.3089969
+potencia = 4000
+
+[node name="Fuelle5" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(848, 751.9999)
+rotation = -0.7853982
+potencia = 4000
+
+[node name="Fuelle6" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(1066, 736)
+potencia = 4000
+
+[node name="Fuelle7" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(1239, 657)
+rotation = -1.0471976
+potencia = 4000
+
+[node name="Fuelle8" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(1258, 488)
+rotation = -0.9047985
+potencia = 4000
+
+[node name="Fuelle9" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(1243, 309.99997)
+rotation = -2.0943952
+potencia = 4000
+
+[node name="Fuelle10" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(1259, 117.99997)
+rotation = -1.5707964
+potencia = 4000
+
+[node name="Fuelle11" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(1248, -62.00006)
+rotation = -2.3561945
+potencia = 4000
+
+[node name="Fuelle12" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(1047, -96.99994)
+rotation = -3.6651917
+potencia = 4000
+
+[node name="Fuelle13" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(851, -91.000015)
+rotation = -2.6179938
+potencia = 4000
+
+[node name="Fuelle14" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(666.00006, -105.000015)
+rotation = -3.1415927
+potencia = 4000
+
+[node name="Fuelle15" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(511, -107)
+rotation = -2.6179938
+potencia = 4000
+
+[node name="Fuelle16" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(315.99997, -99)
+rotation = -3.926991
+potencia = 4000
+
+[node name="Fuelle17" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(133, -101.99999)
+rotation = -4.1887903
+potencia = 4000
+
+[node name="Fuelle22" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(-39, -95)
+rotation = -3.926991
+potencia = 4000
+
+[node name="Fuelle18" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(-86, 45.000015)
+rotation = -4.4505897
+potencia = 4000
+
+[node name="Fuelle19" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(-94, 225)
+rotation = -5.4977875
+potencia = 4000
+
+[node name="Fuelle20" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(-78, 388)
+rotation = -4.712389
+potencia = 4000
+
+[node name="Fuelle21" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(-73, 562)
+rotation = -4.4505897
+potencia = 4000
+
+[node name="Fuelle23" parent="." instance=ExtResource("5_q046x")]
+position = Vector2(-61.000008, 747)
+rotation = -5.759587
+potencia = 4000
+
+[connection signal="pressed" from="Menu_inicio/Control/VBoxContainer/Comenzar" to="Menu_inicio" method="_on_comenzar_pressed"]
+[connection signal="pressed" from="Menu_inicio/Control/VBoxContainer/Salir" to="Menu_inicio" method="_on_salir_pressed"]

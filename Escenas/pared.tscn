@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://trl4u1vkq2ga"]
+
+[ext_resource type="PackedScene" uid="uid://cakn36ironlys" path="res://Escenas/suelo.tscn" id="1_56qo8"]
+
+[node name="Pared" type="Node2D"]
+
+[node name="Suelo" parent="." instance=ExtResource("1_56qo8")]
+position = Vector2(3.0517578e-05, -0.9999695)
+rotation = 1.5707964
+
+[node name="Suelo2" parent="." instance=ExtResource("1_56qo8")]
+position = Vector2(4.7683716e-07, -677)
+rotation = 1.5707964
+
+[node name="Suelo3" parent="." instance=ExtResource("1_56qo8")]
+position = Vector2(1.1920929e-07, -1352)
+rotation = 1.5707964
+
+[node name="Suelo4" parent="." instance=ExtResource("1_56qo8")]
+position = Vector2(1.0000002, -2027.9999)
+rotation = 1.5707964
+
+[node name="Suelo5" parent="." instance=ExtResource("1_56qo8")]
+position = Vector2(0.99999994, -2703)
+rotation = 1.5707964
+
+[node name="Suelo6" parent="." instance=ExtResource("1_56qo8")]
+position = Vector2(0.99999905, -3379)
+rotation = 1.5707964
+
+[node name="Suelo7" parent="." instance=ExtResource("1_56qo8")]
+position = Vector2(0.99999905, -4054)
+rotation = 1.5707964
+
+[node name="Suelo8" parent="." instance=ExtResource("1_56qo8")]
+position = Vector2(1.999999, -4729.9995)
+rotation = 1.5707964
+
+[node name="Suelo9" parent="." instance=ExtResource("1_56qo8")]
+position = Vector2(1.999999, -5405)
+rotation = 1.5707964

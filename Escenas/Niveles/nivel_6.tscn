@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bv5t3ufel00v1"]
+[gd_scene load_steps=12 format=3 uid="uid://bv5t3ufel00v1"]
 
 [ext_resource type="Script" uid="uid://bhmpnwigak4qq" path="res://Clases/Nivel.gd" id="1_fuvjj"]
 [ext_resource type="PackedScene" uid="uid://cakn36ironlys" path="res://Escenas/suelo.tscn" id="2_mclvq"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://blkjmhqhxham3" path="res://Escenas/ventana.tscn" id="7_mclvq"]
 [ext_resource type="PackedScene" uid="uid://de5wac5sb5il7" path="res://Escenas/saco.tscn" id="8_lfge7"]
 [ext_resource type="PackedScene" uid="uid://kdkgakdojnsd" path="res://Escenas/horno.tscn" id="9_vvxo4"]
+[ext_resource type="PackedScene" uid="uid://trl4u1vkq2ga" path="res://Escenas/pared.tscn" id="10_rewf1"]
+[ext_resource type="PackedScene" uid="uid://c6dk8c04i445w" path="res://Escenas/kill_zone.tscn" id="11_msn58"]
 
 [node name="Nivel_6" type="Node2D"]
 script = ExtResource("1_fuvjj")
@@ -563,3 +565,13 @@ position = Vector2(1216, 12110)
 
 [node name="Horno" parent="." instance=ExtResource("9_vvxo4")]
 position = Vector2(811, 11919)
+
+[node name="Pared" parent="." instance=ExtResource("10_rewf1")]
+position = Vector2(-77, 1899)
+
+[node name="Pared2" parent="." instance=ExtResource("10_rewf1")]
+position = Vector2(2050, 1905)
+
+[node name="Kill_zone" parent="." instance=ExtResource("11_msn58")]
+position = Vector2(908, 12667)
+scale = Vector2(117.6472, 15.5405035)

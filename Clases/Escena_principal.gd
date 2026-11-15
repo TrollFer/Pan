@@ -9,14 +9,14 @@ var nivel_actual
 func crear_nivel(numero_nivel: int):
 	if not nivel_actual == null:
 		nivel_actual.queue_free()
-	nivel_actual = niveles[numero_nivel].instantiate()
+	nivel_actual = niveles[numero_nivel+1].instantiate()
 	add_child(nivel_actual)
 	for pantalla in pantallas:
 		nivel_actual.add_child(pantalla.instantiate())
 
 func reiniciar_nivel():
 	nivel_actual.queue_free()
-	nivel_actual = niveles[nivel_actual.numero].instantiate()
+	nivel_actual = niveles[nivel_actual.numero+1].instantiate()
 	add_child(nivel_actual)
 	for pantalla in pantallas:
 		nivel_actual.add_child(pantalla.instantiate())

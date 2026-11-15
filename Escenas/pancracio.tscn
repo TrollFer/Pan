@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://2hr8g2qyvu7r"]
+[gd_scene load_steps=17 format=3 uid="uid://2hr8g2qyvu7r"]
 
 [ext_resource type="Script" uid="uid://dvs750uryln0n" path="res://Scripts/pancracio.gd" id="1_ys81g"]
 [ext_resource type="Resource" uid="uid://comflotwjpxi5" path="res://Recursos/harina.tres" id="2_2fc1q"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://cmv6hahnqukiu" path="res://Assets/Harina/Harina-frame-2.png" id="10_pvxke"]
 [ext_resource type="Texture2D" uid="uid://d3rm7k1n3oklm" path="res://Assets/Harina/Harina-frame-3.png" id="11_xp1qu"]
 [ext_resource type="Texture2D" uid="uid://d3hfv3qhgfks2" path="res://Assets/Harina/Harina2.png" id="12_pyt3c"]
+[ext_resource type="AudioStream" uid="uid://6sccblyvslom" path="res://Assets/Audio/gota.mp3" id="13_pvxke"]
+[ext_resource type="AudioStream" uid="uid://dnhu8722fjtrg" path="res://Assets/Audio/lanzar.mp3" id="13_xp1qu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j012j"]
 animations = [{
@@ -104,3 +106,11 @@ zoom = Vector2(0.8, 0.8)
 [node name="Cuerpo" type="CollisionShape2D" parent="."]
 position = Vector2(4, -14.5)
 shape = SubResource("RectangleShape2D_h2wl8")
+
+[node name="Lanzar" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_xp1qu")
+volume_db = 9.541
+
+[node name="Recogida" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_pvxke")
+volume_db = 24.0
