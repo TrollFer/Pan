@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dxvb2fdvhqgl2"]
+[gd_scene load_steps=14 format=3 uid="uid://dxvb2fdvhqgl2"]
 
 [ext_resource type="Script" uid="uid://bhmpnwigak4qq" path="res://Clases/Nivel.gd" id="1_ghkgf"]
 [ext_resource type="PackedScene" uid="uid://2hr8g2qyvu7r" path="res://Escenas/pancracio.tscn" id="2_navd5"]
@@ -12,6 +12,7 @@
 [ext_resource type="FontFile" uid="uid://dyiw4yclae8gl" path="res://Assets/Matcha Style.otf" id="10_f528e"]
 [ext_resource type="PackedScene" uid="uid://trl4u1vkq2ga" path="res://Escenas/pared.tscn" id="11_n858a"]
 [ext_resource type="PackedScene" uid="uid://blkjmhqhxham3" path="res://Escenas/ventana.tscn" id="12_sp3dq"]
+[ext_resource type="PackedScene" uid="uid://btfmh2oquo8cm" path="res://Assets/Fondos/fondo.tscn" id="13_evyh2"]
 
 [node name="Nivel_3" type="Node2D"]
 script = ExtResource("1_ghkgf")
@@ -130,3 +131,6 @@ scale = Vector2(1.8674582, 1.8674582)
 
 [node name="Gota3" parent="." instance=ExtResource("5_f528e")]
 position = Vector2(473, -782)
+
+[node name="Fondo1PiedraCalida" parent="." instance=ExtResource("13_evyh2")]
+position = Vector2(678, -847)

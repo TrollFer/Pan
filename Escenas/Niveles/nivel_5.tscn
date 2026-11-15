@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bj5et57ktjs4q"]
+[gd_scene load_steps=14 format=3 uid="uid://bj5et57ktjs4q"]
 
 [ext_resource type="Script" uid="uid://bhmpnwigak4qq" path="res://Clases/Nivel.gd" id="1_kh7by"]
 [ext_resource type="PackedScene" uid="uid://cakn36ironlys" path="res://Escenas/suelo.tscn" id="2_qyd20"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://butel0ogsiawu" path="res://Escenas/gota.tscn" id="9_qyd20"]
 [ext_resource type="Texture2D" uid="uid://dxgysf7a6k0r7" path="res://Assets/flecha-correcta.png" id="11_86gyk"]
 [ext_resource type="PackedScene" uid="uid://trl4u1vkq2ga" path="res://Escenas/pared.tscn" id="12_0bgiv"]
+[ext_resource type="PackedScene" uid="uid://btfmh2oquo8cm" path="res://Assets/Fondos/fondo.tscn" id="13_qiuyi"]
 
 [node name="Nivel_5" type="Node2D"]
 script = ExtResource("1_kh7by")
@@ -158,3 +159,6 @@ position = Vector2(-749, 572)
 
 [node name="Pared2" parent="." instance=ExtResource("12_0bgiv")]
 position = Vector2(3407, 578)
+
+[node name="Fondo1PiedraCalida" parent="." instance=ExtResource("13_qiuyi")]
+position = Vector2(1276, 159)

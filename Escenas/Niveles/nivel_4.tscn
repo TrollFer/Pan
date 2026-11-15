@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cnmbplq1mitn5"]
+[gd_scene load_steps=14 format=3 uid="uid://cnmbplq1mitn5"]
 
 [ext_resource type="Script" uid="uid://bhmpnwigak4qq" path="res://Clases/Nivel.gd" id="1_gdly5"]
 [ext_resource type="PackedScene" uid="uid://cakn36ironlys" path="res://Escenas/suelo.tscn" id="2_cix83"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://kdkgakdojnsd" path="res://Escenas/horno.tscn" id="10_0euti"]
 [ext_resource type="PackedScene" uid="uid://trl4u1vkq2ga" path="res://Escenas/pared.tscn" id="11_hwid3"]
 [ext_resource type="PackedScene" uid="uid://c6dk8c04i445w" path="res://Escenas/kill_zone.tscn" id="12_qvta0"]
+[ext_resource type="PackedScene" uid="uid://btfmh2oquo8cm" path="res://Assets/Fondos/fondo.tscn" id="13_qkyuf"]
 
 [node name="Nivel_4" type="Node2D"]
 script = ExtResource("1_gdly5")
@@ -46,8 +47,8 @@ rotation = 3.1415927
 position = Vector2(367, 561)
 
 [node name="Fuelle" parent="." instance=ExtResource("3_da5xb")]
-position = Vector2(780, 150)
-rotation = 0.7853982
+position = Vector2(819.99994, 209)
+rotation = 1.0471976
 potencia = 1500
 
 [node name="Fuelle3" parent="." instance=ExtResource("3_da5xb")]
@@ -115,3 +116,7 @@ scale = Vector2(43.620556, 6.093908)
 [node name="Kill_zone2" parent="." instance=ExtResource("12_qvta0")]
 position = Vector2(2283, -839)
 scale = Vector2(43.620556, 6.093908)
+
+[node name="Fondo1PiedraCalida" parent="." instance=ExtResource("13_qkyuf")]
+position = Vector2(1826, -1107)
+scale = Vector2(6.9645863, 6.9645863)

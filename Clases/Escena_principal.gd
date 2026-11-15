@@ -4,6 +4,8 @@ class_name Escena_principal
 var nivel_actual
 @export var niveles : Array[PackedScene]
 @export var pantallas : Array[PackedScene]
+@export var timer: Timer
+@export var aviso : Label
 
 
 func crear_nivel(numero_nivel: int):
@@ -13,6 +15,8 @@ func crear_nivel(numero_nivel: int):
 	add_child(nivel_actual)
 	for pantalla in pantallas:
 		nivel_actual.add_child(pantalla.instantiate())
+	timer.start()
+	aviso.visible = false
 
 func reiniciar_nivel():
 	nivel_actual.queue_free()
@@ -20,3 +24,5 @@ func reiniciar_nivel():
 	add_child(nivel_actual)
 	for pantalla in pantallas:
 		nivel_actual.add_child(pantalla.instantiate())
+	timer.start()
+	aviso.visible = false

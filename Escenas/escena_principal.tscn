@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b2kr0r673kf47"]
+[gd_scene load_steps=18 format=3 uid="uid://b2kr0r673kf47"]
 
 [ext_resource type="Script" uid="uid://c5ursoy0p5qvy" path="res://Scripts/escena_principal.gd" id="1_wmjee"]
 [ext_resource type="PackedScene" uid="uid://dmw7hbvu65t2g" path="res://Escenas/Niveles/nivel_1.tscn" id="2_7xruv"]
@@ -15,12 +15,16 @@
 [ext_resource type="PackedScene" uid="uid://pmfowdf3yd5a" path="res://Escenas/Niveles/nivel_8.tscn" id="10_iq05a"]
 [ext_resource type="PackedScene" uid="uid://buxornuoe3dn6" path="res://Escenas/Niveles/nivel_9.tscn" id="11_da6c4"]
 [ext_resource type="AudioStream" uid="uid://i14smx8cutso" path="res://Assets/Audio/musica.mp3" id="12_r2o75"]
+[ext_resource type="PackedScene" uid="uid://b8n1445k28aqw" path="res://Escenas/Niveles/nivel_10.tscn" id="12_w7u7t"]
+[ext_resource type="FontFile" uid="uid://dyiw4yclae8gl" path="res://Assets/Matcha Style.otf" id="17_kkxkc"]
 
-[node name="Escena_principal" type="Node"]
+[node name="Escena_principal" type="Node" node_paths=PackedStringArray("timer", "aviso")]
 process_mode = 3
 script = ExtResource("1_wmjee")
-niveles = Array[PackedScene]([ExtResource("2_g8nn0"), ExtResource("2_7xruv"), ExtResource("3_kbm13"), ExtResource("4_i38m2"), ExtResource("5_p0q1u"), ExtResource("6_p0q1u"), ExtResource("7_vgffm"), ExtResource("9_lut2x"), ExtResource("10_iq05a"), ExtResource("11_da6c4")])
+niveles = Array[PackedScene]([ExtResource("2_g8nn0"), ExtResource("2_7xruv"), ExtResource("3_kbm13"), ExtResource("4_i38m2"), ExtResource("5_p0q1u"), ExtResource("6_p0q1u"), ExtResource("7_vgffm"), ExtResource("9_lut2x"), ExtResource("10_iq05a"), ExtResource("11_da6c4"), ExtResource("12_w7u7t")])
 pantallas = Array[PackedScene]([ExtResource("4_urrwd"), ExtResource("5_i38m2"), ExtResource("6_kbm13")])
+timer = NodePath("Timer")
+aviso = NodePath("CanvasLayer/Aviso")
 metadata/_custom_type_script = "uid://cfcguy2cd3b4a"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -28,3 +32,23 @@ stream = ExtResource("12_r2o75")
 volume_db = -28.0
 autoplay = true
 parameters/looping = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 120.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Aviso" type="Label" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("17_kkxkc")
+theme_override_font_sizes/font_size = 32
+text = "Pulsa ESC y reiniciar nivel
+si estás atascado"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

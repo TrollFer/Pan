@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://buxornuoe3dn6"]
+[gd_scene load_steps=11 format=3 uid="uid://buxornuoe3dn6"]
 
 [ext_resource type="Script" uid="uid://bhmpnwigak4qq" path="res://Clases/Nivel.gd" id="1_pkq1x"]
 [ext_resource type="PackedScene" uid="uid://cakn36ironlys" path="res://Escenas/suelo.tscn" id="2_q05mu"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://blkjmhqhxham3" path="res://Escenas/ventana.tscn" id="7_q56mt"]
 [ext_resource type="PackedScene" uid="uid://kdkgakdojnsd" path="res://Escenas/horno.tscn" id="8_u58qm"]
 [ext_resource type="PackedScene" uid="uid://trl4u1vkq2ga" path="res://Escenas/pared.tscn" id="9_lk7cl"]
+[ext_resource type="PackedScene" uid="uid://btfmh2oquo8cm" path="res://Assets/Fondos/fondo.tscn" id="10_u58qm"]
 
 [node name="Nivel_9" type="Node2D"]
 script = ExtResource("1_pkq1x")
@@ -83,3 +84,12 @@ position = Vector2(2090, -190)
 
 [node name="Pared2" parent="." instance=ExtResource("9_lk7cl")]
 position = Vector2(-74, -24)
+
+[node name="Fondo1PiedraCalida" parent="." instance=ExtResource("10_u58qm")]
+position = Vector2(981, 206)
+
+[node name="Ventana4" parent="." instance=ExtResource("7_q56mt")]
+position = Vector2(1216, 764)
+
+[node name="Ventana5" parent="." instance=ExtResource("7_q56mt")]
+position = Vector2(1215, 468)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dmw7hbvu65t2g"]
+[gd_scene load_steps=17 format=3 uid="uid://dmw7hbvu65t2g"]
 
 [ext_resource type="Script" uid="uid://bhmpnwigak4qq" path="res://Clases/Nivel.gd" id="1_gj223"]
 [ext_resource type="PackedScene" uid="uid://cakn36ironlys" path="res://Escenas/suelo.tscn" id="2_3c2k2"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dxgysf7a6k0r7" path="res://Assets/flecha-correcta.png" id="13_etao8"]
 [ext_resource type="PackedScene" uid="uid://trl4u1vkq2ga" path="res://Escenas/pared.tscn" id="14_k5ypl"]
 [ext_resource type="PackedScene" uid="uid://b3y4pryrtktp5" path="res://Escenas/menu_pausa.tscn" id="15_k5ypl"]
+[ext_resource type="PackedScene" uid="uid://btfmh2oquo8cm" path="res://Assets/Fondos/fondo.tscn" id="16_jqkdr"]
 
 [node name="Nivel1" type="Node2D"]
 process_mode = 3
@@ -153,10 +154,10 @@ theme_override_fonts/font = ExtResource("2_lswwr")
 text = "Usa botones para abrir puertas"
 
 [node name="TextEdit10" type="Label" parent="."]
-offset_left = 5905.0
-offset_top = -177.0
-offset_right = 6413.0
-offset_bottom = -98.0
+offset_left = 6583.0
+offset_top = -178.00003
+offset_right = 7091.0
+offset_bottom = -99.00003
 theme_override_colors/font_color = Color(0.9490196, 0.5137255, 0.12156863, 1)
 theme_override_fonts/font = ExtResource("2_lswwr")
 theme_override_font_sizes/font_size = 32
@@ -164,10 +165,10 @@ text = "Entra en el horno como masa
 para superar el nivel"
 
 [node name="TextEdit14" type="Label" parent="."]
-offset_left = 4942.0
-offset_top = -102.0
-offset_right = 5626.0
-offset_bottom = -23.0
+offset_left = 5620.0
+offset_top = -103.00003
+offset_right = 6304.0
+offset_bottom = -24.00003
 theme_override_fonts/font = ExtResource("2_lswwr")
 theme_override_font_sizes/font_size = 32
 text = "Si en algun momento te quedas atascado,
@@ -185,15 +186,26 @@ para volver a tu estado
 original"
 
 [node name="TextEdit13" type="Label" parent="."]
-offset_left = 4185.0
-offset_top = -216.0
-offset_right = 4513.0
-offset_bottom = -137.0
+offset_left = 4966.0
+offset_top = -214.00003
+offset_right = 5294.0
+offset_bottom = -135.00003
 theme_override_colors/font_color = Color(0.9490196, 0.5137255, 0.12156863, 1)
 theme_override_fonts/font = ExtResource("2_lswwr")
 theme_override_font_sizes/font_size = 32
 text = "Usa el saco para 
 volver a ser harina"
+
+[node name="TextEdit19" type="Label" parent="."]
+offset_left = 3820.0
+offset_top = -475.0
+offset_right = 4253.0
+offset_bottom = -396.0
+theme_override_colors/font_color = Color(0.9490196, 0.5137255, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("2_lswwr")
+theme_override_font_sizes/font_size = 32
+text = "Lanza el trozo en el aire 
+para ganar más altura"
 
 [node name="TextEdit11" type="Label" parent="."]
 offset_left = 2516.0
@@ -248,26 +260,26 @@ position = Vector2(3877.0002, 194.00003)
 position = Vector2(3877.0002, 351)
 
 [node name="Suelo19" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(4551, 194)
+position = Vector2(5229, 192.99997)
 
 [node name="Suelo26" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(4791, -365.99997)
+position = Vector2(5469, -367)
 rotation = 1.5707964
 
 [node name="Suelo20" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(4551, 350.99997)
+position = Vector2(5229, 349.99994)
 
 [node name="Suelo22" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(5223, 195.00003)
+position = Vector2(5901, 194)
 
 [node name="Suelo23" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(5223, 352)
+position = Vector2(5901, 350.99997)
 
 [node name="Suelo24" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(5897, 195)
+position = Vector2(6575, 193.99997)
 
 [node name="Suelo25" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(5897, 351.99997)
+position = Vector2(6575, 350.99994)
 
 [node name="Suelo5" parent="." instance=ExtResource("2_3c2k2")]
 position = Vector2(-838.9999, 193.00003)
@@ -318,7 +330,7 @@ position = Vector2(3202.0002, 516)
 position = Vector2(3205.0002, 673.00006)
 
 [node name="Suelo34" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(3320.0002, -392.99982)
+position = Vector2(4568, -285.00003)
 
 [node name="Suelo35" parent="." instance=ExtResource("2_3c2k2")]
 position = Vector2(3876.0002, 516)
@@ -326,35 +338,47 @@ position = Vector2(3876.0002, 516)
 [node name="Suelo36" parent="." instance=ExtResource("2_3c2k2")]
 position = Vector2(3876.0002, 673)
 
+[node name="Suelo77" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(4553.0005, 195.00002)
+
+[node name="Suelo78" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(4553, 349.99997)
+
+[node name="Suelo79" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(4552, 514.99994)
+
+[node name="Suelo80" parent="." instance=ExtResource("2_3c2k2")]
+position = Vector2(4552, 672)
+
 [node name="Suelo37" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(4550, 516)
+position = Vector2(5228, 514.99994)
 
 [node name="Suelo38" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(4550, 672.99994)
+position = Vector2(5228, 671.9999)
 
 [node name="Suelo39" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(5222, 517)
+position = Vector2(5900, 515.99994)
 
 [node name="Suelo40" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(5222, 674)
+position = Vector2(5900, 672.99994)
 
 [node name="Suelo41" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(5896, 517)
+position = Vector2(6574, 515.99994)
 
 [node name="Suelo42" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(5896, 673.99994)
+position = Vector2(6574, 672.9999)
 
 [node name="Suelo69" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(6572, 195)
+position = Vector2(7250, 193.99997)
 
 [node name="Suelo70" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(6572, 351.99997)
+position = Vector2(7250, 350.99994)
 
 [node name="Suelo71" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(6571, 517)
+position = Vector2(7249, 515.99994)
 
 [node name="Suelo72" parent="." instance=ExtResource("2_3c2k2")]
-position = Vector2(6571, 673.99994)
+position = Vector2(7249, 672.9999)
 
 [node name="Suelo43" parent="." instance=ExtResource("2_3c2k2")]
 position = Vector2(-840, 515)
@@ -450,9 +474,6 @@ position = Vector2(273.99997, -11.0000305)
 rotation = 1.5707964
 scale = Vector2(0.2082112, 0.6062224)
 
-[node name="Pancracio" parent="." instance=ExtResource("3_lswwr")]
-position = Vector2(-5619, -1961)
-
 [node name="Coladero" parent="." instance=ExtResource("4_llk6u")]
 position = Vector2(-1742, -377)
 
@@ -475,16 +496,16 @@ objetivo = NodePath("../Puerta")
 position = Vector2(-1324, -73)
 
 [node name="Horno" parent="." instance=ExtResource("12_gmctc")]
-position = Vector2(6067, 13.000008)
+position = Vector2(6745, 11.999977)
 
 [node name="Saco" parent="." instance=ExtResource("12_nqjrd")]
-position = Vector2(4320, -68)
+position = Vector2(5101, -66.00003)
 
 [node name="Coladero2" parent="." instance=ExtResource("4_llk6u")]
-position = Vector2(4787, 49)
+position = Vector2(5465, 47.99997)
 
 [node name="Gota2" parent="." instance=ExtResource("7_l8lnw")]
-position = Vector2(5780, -98)
+position = Vector2(6458, -99.00003)
 
 [node name="FlechaCorrecta" type="Sprite2D" parent="."]
 position = Vector2(-1933, -2049)
@@ -498,6 +519,21 @@ position = Vector2(-3280, 4020)
 position = Vector2(-6467, -2061)
 
 [node name="Pared3" parent="." instance=ExtResource("14_k5ypl")]
-position = Vector2(6998, 436)
+position = Vector2(7676, 434.99997)
 
 [node name="Menu_pausa" parent="." instance=ExtResource("15_k5ypl")]
+
+[node name="Fondo1PiedraCalida" parent="." instance=ExtResource("16_jqkdr")]
+position = Vector2(-986, -2334)
+scale = Vector2(15.887705, 15.887705)
+
+[node name="Puerta2" parent="." instance=ExtResource("8_rbs6h")]
+position = Vector2(4244, -67.00001)
+scale = Vector2(3.149213, 3.9478374)
+
+[node name="Boton2" parent="." node_paths=PackedStringArray("objetivo") instance=ExtResource("9_310hg")]
+position = Vector2(4452, -391)
+objetivo = NodePath("../Puerta2")
+
+[node name="Pancracio" parent="." instance=ExtResource("3_lswwr")]
+position = Vector2(-5895, -1962)

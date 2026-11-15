@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://btfmh2oquo8cm"]
+
+[ext_resource type="Texture2D" uid="uid://btq5l24p84mhn" path="res://Assets/Fondos/78866b.png" id="1_xiwdt"]
+
+[node name="Fondo1PiedraCalida" type="Sprite2D"]
+z_index = -2
+position = Vector2(520, 483)
+scale = Vector2(4.4764504, 4.4764504)
+texture = ExtResource("1_xiwdt")

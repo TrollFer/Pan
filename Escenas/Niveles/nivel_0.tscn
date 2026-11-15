@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://co00fp5vcwuaf"]
+[gd_scene load_steps=11 format=3 uid="uid://co00fp5vcwuaf"]
 
 [ext_resource type="Script" uid="uid://bhmpnwigak4qq" path="res://Clases/Nivel.gd" id="1_sfpuu"]
 [ext_resource type="Script" uid="uid://d1sgt5pwf3ida" path="res://Scripts/menu_inicio.gd" id="2_4dn7x"]
 [ext_resource type="FontFile" uid="uid://dyiw4yclae8gl" path="res://Assets/Matcha Style.otf" id="2_xmix5"]
 [ext_resource type="PackedScene" uid="uid://2hr8g2qyvu7r" path="res://Escenas/pancracio.tscn" id="4_puat8"]
 [ext_resource type="PackedScene" uid="uid://x2vm7q58f2k4" path="res://Escenas/fuelle.tscn" id="5_q046x"]
+[ext_resource type="PackedScene" uid="uid://btfmh2oquo8cm" path="res://Assets/Fondos/fondo.tscn" id="6_xy1cg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dn7x"]
 bg_color = Color(0.8901961, 0.6117647, 0.44705883, 1)
@@ -250,6 +251,9 @@ potencia = 4000
 position = Vector2(-61.000008, 747)
 rotation = -5.759587
 potencia = 4000
+
+[node name="Fondo1PiedraCalida" parent="." instance=ExtResource("6_xy1cg")]
+position = Vector2(726, 548)
 
 [connection signal="pressed" from="Menu_inicio/Control/VBoxContainer/Comenzar" to="Menu_inicio" method="_on_comenzar_pressed"]
 [connection signal="pressed" from="Menu_inicio/Control/VBoxContainer/Salir" to="Menu_inicio" method="_on_salir_pressed"]
